@@ -107,7 +107,6 @@ abbr {
   font-size: 80%;
 }
 .next {
-  transform: rotate(-2deg);
   max-width: 700px;
   clear: right;
   background: #fcfcfc;
