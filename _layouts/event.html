@@ -19,16 +19,16 @@ layout: default
       {% endif %}
     </time>
   </p>
+
   {% assign venue=site.data.venues[page.venue] %}
   {% include venue.html venue=venue %}
-  {% include tags.html %}
-</section>
 
-<section>
+  {% include tags.html %}
+
   {% if page.photo %}
     <figure class="photo">
       <a href="/photos/{{ page.photo }}">
-        <img src="/photos/{{ page.photo }}" alt="Group photo from HWC London.">
+        <img src="/photos/{{ page.photo }}" class="u-photo" alt="Group photo from HWC London.">
       </a>
       <figcaption>HWC London group photo (L-R):</figcaption>
     </figure>
@@ -36,14 +36,14 @@ layout: default
 
   <ul>
     {% for attendee in page.attendees %}
-      <li>
+      <li class="u-category h-card">
         <i class="fa fa-user-circle"></i>
         {% if site.data.attendees contains attendee %}
-          <a href="{{ attendee }}">
+          <a class="u-url p-name" href="{{ attendee }}">
             {{ site.data.attendees[attendee].name }}
           </a>
         {% else %}
-          {{ attendee }}
+          <span class="p-name">{{ attendee }}</span>
         {% endif %}
       </li>
     {% endfor %}
