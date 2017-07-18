@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ "/assets/hwclondon.css" | relative_url }}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <title>{% if page.start %}{{ page.start | date: '%e %B %Y' }} meeting{% else %}{{ site.title | escape }}{% endif %}</title>
+  </head>
+  <body>
+    
+    <header>
+      {% if page.url == '/' %}
+        <h1>Homebrew Website Club, London</h1>
+      {% else %}
+        <h1><a href="/">Homebrew Website Club, London</a></h1>
+      {% endif %}
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+    
+    <footer>
+      <p>
+        <abbr title="Homebrew Website Club">HWC</abbr> London is organised by
+        <a href="https://calumryan.com/">Calum Ryan</a>
+        &amp;
+        <a href="https://barryfrost.com/">Barry Frost</a>.
+      </p>
+      <p>
+        Venue kindly provided by
+        <a href="http://dev.venntro.com/">Venntro Media Group</a>.
+      </p>
+      <ul>
+        <li>
+          <i class="fa fa-twitter"></i>
+          <a rel="me" href="https://twitter.com/hwclondon">hwclondon</a>
+        </li>
+      </ul>
+    </footer>     
+  </body>
+</html>

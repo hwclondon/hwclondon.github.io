@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<section class="h-event">
+  <p>
+    <i class="fa fa-calendar"></i>
+    <time class="dt-start" datetime="{{ page.start }}">
+      {{ page.start | date: '%A %e %B %Y at %l%P' }}
+    </time>
+    &mdash;
+    <time class="dt-end" datetime="{{ page.end }}">
+      {{ page.end | date: '%l%P' }}
+      {% assign tz = page.end | date: '%Z' %}
+      {% if tz == 'BST' %}
+        <abbr title="British Summer Time">BST</abbr>.
+      {% else %}
+        <abbr title="Greenwich Mean Time">GMT</abbr>.
+      {% endif %}
+    </time>
+  </p>
+  {% assign venue=site.data.venues[page.venue] %}
+  {% include venue.html venue=venue %}
+  {% include tags.html %}
+</section>
+
+<section>
+  {% if page.photo %}
+    <figure class="photo">
+      <a href="/photos/{{ page.photo }}">
+        <img src="/photos/{{ page.photo }}" alt="Group photo from HWC London.">
+      </a>
+      <figcaption>HWC London group photo (L-R):</figcaption>
+    </figure>
+  {% endif %}
+
+  <ul>
+    {% for attendee in page.attendees %}
+      <li>
+        <i class="fa fa-user-circle"></i>
+        {% if site.data.attendees contains attendee %}
+          <a href="{{ attendee }}">
+            {{ site.data.attendees[attendee].name }}
+          </a>
+        {% else %}
+          {{ attendee }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,11 @@
+title: Homebrew Website Club, London
+collections:
+  events:
+    output: true
+    permalink: /:path
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: event
+  

@@ -1,126 +1,104 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/hwclondon.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <title>Homebrew Website Club, London</title>
-  </head>
-  <body>
-    <header>
-      <h1>Homebrew Website Club, London</h1>
-    </header>
-    <main>
+---
+layout: default
+---
+{% assign events_sorted = site.events | sort: 'start' | reverse %}
+{% assign next_event = events_sorted.first %}
 
-      <section class="h-event next">
-        <h3 class="p-name">
-          Next meeting
-        </h3>
-        <p>
-          <i class="fa fa-calendar"></i>
-          <time class="dt-start" datetime="2017-08-09T17:00Z">
-            Wednesday 9th August 2017 at 6pm
-          </time>
-          &mdash;
-          <time class="dt-end" datetime="2017-08-09T19:00Z">
-            8pm
-            <abbr title="British Summer Time">BST</abbr>.
-          </time>
-        </p>
-        <div class="p-location h-card">
-          <p>
-            <i class="fa fa-location-arrow"></i>
-            <a class="p-name u-url" href="https://www.wework.com/buildings/south-bank-central--london">
-              WeWork South Bank Central</a>,
-            <span class="p-street-address">30 Stamford Street</span>,
-            <span class="p-locality">London</span>
-            <span class="p-postal-code">SE1&nbsp;9LQ</span>.
-          </p>
-        </div>
-        <p>
-          <strong>
-            If you wish to attend you must <a href="#rsvp">RSVP</a>.
-          </strong>
-        </p>
-        <p class="p-summary">
-          Finish that blog post you’ve been working on.
-          Demos of personal websites and technology.
-          Discussion around the independent web.
-          Join a community with like-minded interests.
-          Bring friends that want a personal site!
-        </p>
-        <ul>
-          <li>#<span class="p-category">hwc</span></li>
-          <li>#<span class="p-category">hwclondon</span></li>
-          <li>#<span class="p-category">indieweb</span></li>
-        </ul>
-      </section>
+<section class="next h-event">
+  <h2 class="p-name">
+    Next meeting
+  </h2>
+  <p>
+    <i class="fa fa-calendar"></i>
+    <time class="dt-start" datetime="{{ next_event.start }}">
+      {{ next_event.start | date: '%A %e %B %Y at %l%P' }}
+    </time>
+    &mdash;
+    <time class="dt-end" datetime="{{ next_event.end }}">
+      {{ next_event.end | date: '%l%P' }}
+      {% assign tz = next_event.end | date: '%Z' %}
+      {% if tz == 'BST' %}
+        <abbr title="British Summer Time">BST</abbr>.
+      {% else %}
+        <abbr title="Greenwich Mean Time">GMT</abbr>.
+      {% endif %}
+    </time>
+  </p>
+  {% assign venue=site.data.venues['wework-sbc'] %}
+  {% include venue.html venue=venue %}
+  <p>
+    <strong>
+      If you wish to attend you must <a href="#rsvp">RSVP</a>.
+    </strong>
+  </p>
+  <p class="p-summary">
+    Finish that blog post you’ve been working on.
+    Demos of personal websites and technology.
+    Discussion around the independent web.
+    Join a community with like-minded interests.
+    Bring friends that want a personal site!
+  </p>
+  {% include tags.html %}
+</section>
 
-      <section>
-        <h2>What is Homebrew Website Club?</h2>
-        <p>
-          <a href="https://indieweb.org/Homebrew_Website_Club">Homebrew Website
-          Club</a> is a fortnightly meetup of people passionate about or
-          interested in creating, improving, building, designing their own
-          website.
-        </p>
-        <p>The format is deliberately loose. After introductions we talk about
-          what we're working on and see if we can help each other with projects.
-          Whether you're just starting out with your own website or you want to
-          discuss the latest IndieWeb technologies you're welcome to join us.
-        </p>
-      </section>
+<section>
+  <h2>What is Homebrew Website Club?</h2>
+  <p>
+    <a href="https://indieweb.org/Homebrew_Website_Club">Homebrew Website
+    Club</a> is a fortnightly meetup of people passionate about or
+    interested in creating, improving, building, designing their own
+    website.
+  </p>
+  <p>The format is deliberately loose. After introductions we talk about
+    what we're working on and see if we can help each other with projects.
+    Whether you're just starting out with your own website or you want to
+    discuss the latest IndieWeb technologies you're welcome to join us.
+  </p>
+</section>
 
-      <section>
-        <h2>When do you meet and where?</h2>
-        <p>
-          We meet every other Wednesday from 6pm until roughly 8pm. This page
-          shows the next event, or you can
-          <a href="https://twitter.com/hwclondon">follow us on Twitter</a> for
-          announcements or other news.
-        </p>
-        <p>
-          As of 12th July 2017 we have a new venue:
-          <a href="https://www.wework.com/buildings/south-bank-central--london">
-            WeWork South Bank Central</a>.
-        </p>
-      </section>
+<section>
+  <h2>When do you meet and where?</h2>
+  <p>
+    We meet every other Wednesday from 6pm until roughly 8pm. This page
+    shows the next event, or you can
+    <a href="https://twitter.com/hwclondon">follow us on Twitter</a> for
+    announcements or other news.
+  </p>
+  <p>
+    As of 12th July 2017 we have a new venue:
+    <a href="https://www.wework.com/buildings/south-bank-central--london">
+      WeWork South Bank Central</a>.
+  </p>
+</section>
 
-      <section>
-        <h2 id="rsvp">RSVP</h2>
-        <p>
-          WeWork's building security require non-cardholders to register as guests
-          before being allowed access to the building.
-        </p>
-        <p>
-          <a href="https://barryfrost.com/contact">Contact Barry</a>
-          with your full name and he will add you as a guest.
-        </p>
-        <p>
-          Please meet at 6pm at the 30 Stamford Street ground floor reception.
-        </p>
-      </section>
+<section>
+  <h2 id="rsvp">RSVP</h2>
+  <p>
+    WeWork's building security require non-cardholders to register as guests
+    before being allowed access to the building.
+  </p>
+  <p>
+    <a href="https://barryfrost.com/contact">Contact Barry</a>
+    with your full name and he will add you as a guest.
+  </p>
+  <p>
+    Please meet at 6pm at the 30 Stamford Street ground floor reception.
+  </p>
+</section>
 
-    </main>
-    <footer>
-      <p>
-        Organised by
-        <a href="https://calumryan.com/">Calum Ryan</a>
-        &amp;
-        <a href="https://barryfrost.com/">Barry Frost</a>.
-      </p>
-      <p>
-        Venue kindly provided by
-        <a href="http://dev.venntro.com/">Venntro Media Group</a>.
-      </p>
-      <ul>
+<section>
+  <h2>Previous meetings</h2>
+  <ol>
+    {% assign now_d = site.time | date: '%F' %}
+    {% for event in events_sorted %}
+      {% assign start_d = event.start | date: '%F' %}
+      {% if start_d < now_d %}
         <li>
-          <i class="fa fa-twitter"></i>
-          <a rel="me" href="https://twitter.com/hwclondon">hwclondon</a>
+          <a href="{{ event.start | date: '%Y%m%d' }}">
+            {{ event.start | date: '%e %B %Y' }}
+          </a>
         </li>
-      </ul>
-    </footer>
-  </body>
-</html>
-
+      {% endif %}
+    {% endfor %}
+  </ol>
+</section>

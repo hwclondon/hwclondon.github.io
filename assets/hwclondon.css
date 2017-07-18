@@ -59,13 +59,16 @@ body {
   line-height: 30px;
 }
 
-h1, h2, h3, p, ul {
+h1, h2, h3, p, figure, ul, ol {
   margin-bottom: 20px;
 }
 h2, h3 {
   font-weight: 600;
   color: #000;
   padding-top: 20px;
+}
+li {
+  margin-bottom: 10px;
 }
 
 a {
@@ -89,11 +92,6 @@ header h1 {
   font-weight: 600;
   font-size: 30px;
 }
-/*
-main p, main ul {
-  margin-left: 30px;
-}
-*/
 footer {
   border-top: 2px solid #ffb100;
   padding: 30px 30px 0 30px;
@@ -103,19 +101,30 @@ i.fa {
   color: #5c5c5c;
   padding-right: 5px;
 }
-abbr {
+time abbr {
   font-size: 80%;
 }
 .next {
   max-width: 700px;
-  clear: right;
   background: #fcfcfc;
   border: 2px solid #ffb100;
   padding: 0 20px;
   margin-bottom: 30px;
 }
-.next li {
+.tags li {
   display: inline;
   color: #5c5c5c;
+}
+.tags li span {
+  margin-right: 5px;
+}
+
+figure img {
+  max-height: 300px;
+}
+figure a {
+  border: none;
+}
+figcaption {
   font-size: 17px;
 }
