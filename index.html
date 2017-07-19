@@ -1,45 +1,49 @@
 ---
 layout: default
 ---
-{% assign events_sorted = site.events | sort: 'start' | reverse %}
-{% assign next_event = events_sorted.first %}
 
-<section class="next h-event">
-  <h2 class="p-name">
-    Next meeting
-  </h2>
-  <p>
-    <i class="fa fa-calendar"></i>
-    <time class="dt-start" datetime="{{ next_event.start }}">
-      {{ next_event.start | date: '%A %e %B %Y at %l%P' }}
-    </time>
-    &mdash;
-    <time class="dt-end" datetime="{{ next_event.end }}">
-      {{ next_event.end | date: '%l%P' }}
-      {% assign tz = next_event.end | date: '%Z' %}
-      {% if tz == 'BST' %}
-        <abbr title="British Summer Time">BST</abbr>.
-      {% else %}
-        <abbr title="Greenwich Mean Time">GMT</abbr>.
-      {% endif %}
-    </time>
-  </p>
-  {% assign venue=site.data.venues['wework-sbc'] %}
-  {% include venue.html venue=venue %}
-  <p>
-    <strong>
-      If you wish to attend you must <a href="#rsvp">RSVP</a>.
-    </strong>
-  </p>
-  <p class="p-summary">
-    Finish that blog post you’ve been working on.
-    Demos of personal websites and technology.
-    Discussion around the independent web.
-    Join a community with like-minded interests.
-    Bring friends that want a personal site!
-  </p>
-  {% include tags.html %}
-</section>
+{% assign sorted_events = site.events | sort: 'end' %}
+{% for next_event in sorted_events %}
+  {% if next_event.end >= site.time %}
+    <section class="next h-event">
+      <h2 class="p-name">
+        Next meeting
+      </h2>
+      <p>
+        <i class="fa fa-calendar"></i>
+        <time class="dt-start" datetime="{{ next_event.start }}">
+          {{ next_event.start | date: '%A %e %B %Y at %l%P' }}
+        </time>
+        &mdash;
+        <time class="dt-end" datetime="{{ next_event.end }}">
+          {{ next_event.end | date: '%l%P' }}
+          {% assign tz = next_event.end | date: '%Z' %}
+          {% if tz == 'BST' %}
+            <abbr title="British Summer Time">BST</abbr>.
+          {% else %}
+            <abbr title="Greenwich Mean Time">GMT</abbr>.
+          {% endif %}
+        </time>
+      </p>
+      {% assign venue=site.data.venues['wework-sbc'] %}
+      {% include venue.html venue=venue %}
+      <p>
+        <strong>
+          If you wish to attend you must <a href="#rsvp">RSVP</a>.
+        </strong>
+      </p>
+      <p class="p-summary">
+        Finish that blog post you’ve been working on.
+        Demos of personal websites and technology.
+        Discussion around the independent web.
+        Join a community with like-minded interests.
+        Bring friends that want a personal site!
+      </p>
+      {% include tags.html %}
+    </section>
+    {% break %}
+  {% endif %}
+{% endfor %}
 
 <section>
   <h2>What is Homebrew Website Club?</h2>
@@ -89,10 +93,11 @@ layout: default
 <section>
   <h2>Previous meetings</h2>
   <ol>
+    {% assign upcoming_events = site.events | sort: 'end' | reverse %}
     {% assign now_d = site.time | date: '%F' %}
-    {% for event in events_sorted %}
-      {% assign start_d = event.start | date: '%F' %}
-      {% if start_d < now_d %}
+    {% for event in upcoming_events %}
+      {% assign end_d = event.end | date: '%F' %}
+      {% if end_d < now_d %}
         <li>
           <a href="{{ event.start | date: '%Y%m%d' }}">
             {{ event.start | date: '%e %B %Y' }}
