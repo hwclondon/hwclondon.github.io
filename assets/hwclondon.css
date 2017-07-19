@@ -105,11 +105,15 @@ i.fa {
 time abbr {
   font-size: 80%;
 }
-.next {
+.box {
   max-width: 700px;
   background: #fcfcfc;
   border: 2px solid #ffb100;
   padding: 0 20px;
+  margin-bottom: 30px;
+}
+.box h2 {
+  font-size: 25px;
   margin-bottom: 30px;
 }
 .tags li {
@@ -128,4 +132,14 @@ figure a {
 }
 figcaption {
   font-size: 17px;
+}
+
+#webmentions img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  border-radius: 20px;
+}
+#webmentions a {
+  border: none;
 }

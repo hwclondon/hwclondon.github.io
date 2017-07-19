@@ -2,12 +2,17 @@
 layout: default
 ---
 
+<div class="h-card p-author" hidden>
+  <img class="u-photo" src="/assets/hwclondon.png" alt="HWC London logo">
+  <a class="u-url p-name" href="https://hwclondon.co.uk">Homebrew Website Club, London</a>
+</div>
+
 {% assign sorted_events = site.events | sort: 'end' %}
 {% for next_event in sorted_events %}
   {% if next_event.end >= site.time %}
-    <section class="next h-event">
+    <section class="box h-event">
       <h2 class="p-name">
-        Next meeting
+        <a href="{{ next_event.url }}">Next meeting</a>
       </h2>
       <p>
         <i class="fa fa-calendar"></i>
@@ -27,6 +32,7 @@ layout: default
       </p>
       {% assign venue=site.data.venues['wework-sbc'] %}
       {% include venue.html venue=venue %}
+      {% include tags.html %}
       <p>
         <strong>
           If you wish to attend you must <a href="#rsvp">RSVP</a>.
@@ -39,7 +45,6 @@ layout: default
         Join a community with like-minded interests.
         Bring friends that want a personal site!
       </p>
-      {% include tags.html %}
     </section>
     {% break %}
   {% endif %}
@@ -63,31 +68,21 @@ layout: default
 <section>
   <h2>When do you meet and where?</h2>
   <p>
-    We meet every other Wednesday from 6pm until roughly 8pm. This page
+    We mostly meet every other Wednesday from 6pm until roughly 8pm. This page
     shows the next event, or you can
     <a href="https://twitter.com/hwclondon">follow us on Twitter</a> for
     announcements or other news.
   </p>
   <p>
-    As of 12th July 2017 we have a new venue:
+    As of 12 July 2017 we have a new venue:
     <a href="https://www.wework.com/buildings/south-bank-central--london">
       WeWork South Bank Central</a>.
   </p>
 </section>
 
 <section>
-  <h2 id="rsvp">RSVP</h2>
-  <p>
-    WeWork's building security require non-cardholders to register as guests
-    before being allowed access to the building.
-  </p>
-  <p>
-    <a href="https://barryfrost.com/contact">Contact Barry</a>
-    with your full name and he will add you as a guest.
-  </p>
-  <p>
-    Please meet at 6pm at the 30 Stamford Street ground floor reception.
-  </p>
+  <h2 id="rsvp">Join us!</h2>
+  {% include rsvp_help.html %}
 </section>
 
 <section>

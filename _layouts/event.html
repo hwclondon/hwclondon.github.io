@@ -1,8 +1,11 @@
 ---
 layout: default
 ---
+<div class="h-event">
+<a rel="author" href="/" hidden></a>
 
-<section class="h-event">
+<section>
+  <h2>Meeting details</h2>
   <span hidden class="p-name">{{ page.start | date: '%e %B %Y' }} HWC London meeting</span>
   <p>
     <i class="fa fa-calendar"></i>
@@ -20,33 +23,68 @@ layout: default
       {% endif %}
     </time>
   </p>
-
   {% assign venue=site.data.venues[page.venue] %}
   {% include venue.html venue=venue %}
-
   {% include tags.html %}
-
-  {% if page.photo %}
-    <figure class="photo">
-      <a href="/photos/{{ page.photo }}">
-        <img src="/photos/{{ page.photo }}" class="u-photo" alt="Group photo from HWC London.">
-      </a>
-      <figcaption>HWC London group photo (L-R):</figcaption>
-    </figure>
-  {% endif %}
-
-  <ul>
-    {% for attendee in page.attendees %}
-      <li class="u-category h-card">
-        <i class="fa fa-user-circle"></i>
-        {% if site.data.attendees contains attendee %}
-          <a class="u-url p-name" href="{{ attendee }}">
-            {{ site.data.attendees[attendee].name }}
-          </a>
-        {% else %}
-          <span class="p-name">{{ attendee }}</span>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
 </section>
+
+{% if content.length %}
+  <section>
+    {{ content }}
+  </section>
+{% endif %}
+
+{% if site.time < page.start %}
+  <section>
+    <h2>RSVPs</h2>
+    <div id="webmentions"></div>
+    {% raw %}
+      <script id="template" type="x-tmpl-mustache">
+        <ul>
+          {{#rsvps}}
+            <li>
+              <i class="fa {{icon}}"></i>
+              <a href="{{url}}">
+                <img src="{{author.photo}}" alt="{{author.name}}">
+                {{author.name}}
+              </a>
+              {{label}}
+            </li>
+          {{/rsvps}}
+        </ul>
+      </script>
+    {% endraw %}
+    <script>PAGE_URL = "https://hwclondon.co.uk{{ page.url }}";</script>
+    {% include rsvp_help.html %}
+  </section>
+{% endif %}
+
+{% if page.photo or page.attendees %}
+  <section>
+    <h2>Attendees</h2>
+    {% if page.photo %}
+      <figure class="photo">
+        <a href="/photos/{{ page.photo }}">
+          <img src="/photos/{{ page.photo }}" class="u-photo" alt="Group photo from HWC London.">
+        </a>
+        <figcaption>HWC London group photo (L-R):</figcaption>
+      </figure>
+    {% endif %}
+    <ul>
+      {% for attendee in page.attendees %}
+        <li class="u-category h-card">
+          <i class="fa fa-user-circle"></i>
+          {% if site.data.attendees contains attendee %}
+            <a class="u-url p-name" href="{{ attendee }}">
+              {{ site.data.attendees[attendee].name }}
+            </a>
+          {% else %}
+            <span class="p-name">{{ attendee }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
+
+</div>
