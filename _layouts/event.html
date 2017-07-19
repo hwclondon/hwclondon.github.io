@@ -14,13 +14,7 @@ layout: default
     </time>
     &mdash;
     <time class="dt-end" datetime="{{ page.end }}">
-      {{ page.end | date: '%l%P' }}
-      {% assign tz = page.end | date: '%Z' %}
-      {% if tz == 'BST' %}
-        <abbr title="British Summer Time">BST</abbr>.
-      {% else %}
-        <abbr title="Greenwich Mean Time">GMT</abbr>.
-      {% endif %}
+      {{ page.end | date: '%l%P' }}.
     </time>
   </p>
   {% assign venue=site.data.venues[page.venue] %}

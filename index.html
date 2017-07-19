@@ -21,13 +21,7 @@ layout: default
         </time>
         &mdash;
         <time class="dt-end" datetime="{{ next_event.end }}">
-          {{ next_event.end | date: '%l%P' }}
-          {% assign tz = next_event.end | date: '%Z' %}
-          {% if tz == 'BST' %}
-            <abbr title="British Summer Time">BST</abbr>.
-          {% else %}
-            <abbr title="Greenwich Mean Time">GMT</abbr>.
-          {% endif %}
+          {{ next_event.end | date: '%l%P' }}.
         </time>
       </p>
       {% assign venue=site.data.venues['wework-sbc'] %}
