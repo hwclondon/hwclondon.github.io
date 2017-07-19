@@ -47,6 +47,7 @@ $(function(){
     $.getJSON("https://webmention.io/api/mentions?jsonp=?", {
       target: PAGE_URL
     }, function(data) {
+      console.log(data);
       var rsvps = findRSVPs(data);
       buildRSVPs(rsvps);
     });
