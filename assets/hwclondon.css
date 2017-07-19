@@ -91,6 +91,7 @@ header, main {
 header h1 {
   font-weight: 600;
   font-size: 30px;
+  line-height: 40px;
 }
 footer {
   border-top: 2px solid #ffb100;
@@ -120,7 +121,7 @@ time abbr {
 }
 
 figure img {
-  max-height: 300px;
+  max-width: 350px;
 }
 figure a {
   border: none;
