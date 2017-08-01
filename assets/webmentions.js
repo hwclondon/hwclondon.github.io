@@ -44,8 +44,9 @@ $(function(){
   }
 
   if ($('#webmentions').length) {
+    var pageURL = $("link[rel='canonical']").attr("href");
     $.getJSON("https://webmention.io/api/mentions?jsonp=?", {
-      target: PAGE_URL
+      target: pageURL
     }, function(data) {
       console.log(data);
       var rsvps = findRSVPs(data);
