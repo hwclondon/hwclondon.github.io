@@ -1,4 +1,5 @@
 title: Homebrew Website Club, London
+root_url: https://hwclondon.co.uk
 collections:
   events:
     output: true
@@ -8,4 +9,3 @@ defaults:
       path: ''
     values:
       layout: event
-  
