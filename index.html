@@ -7,7 +7,7 @@ layout: default
   <a class="u-url p-name" href="https://hwclondon.co.uk">Homebrew Website Club, London</a>
 </div>
 
-{% assign sorted_events = site.events | sort: 'end' %}
+{% assign sorted_events = site.events | sort: 'end' | reverse %}
 {% for next_event in sorted_events %}
   {% if next_event.end >= site.time %}
     <section class="box h-event">
@@ -85,8 +85,8 @@ layout: default
     {% assign upcoming_events = site.events | sort: 'end' | reverse %}
     {% assign now_d = site.time | date: '%F' %}
     {% for event in upcoming_events %}
-      {% assign end_d = event.end | date: '%F' %}
-      {% if end_d < now_d %}
+      {% assign start_d = event.start | date: '%F' %}
+      {% if start_d <= now_d %}
         <li>
           <a href="{{ event.start | date: '%Y%m%d' }}">
             {{ event.start | date: '%e %B %Y' }}
