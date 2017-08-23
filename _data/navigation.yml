@@ -1,15 +1,15 @@
 # Site navigation links
 
 - title: About
-  url: /about/#intro
+  url: /about#intro
   type: nav-normal
 
 - title: Meetups
-  url: /meetups/#intro
+  url: /meetups#intro
   type: nav-normal
 
 - title: People
-  url: /people/#intro
+  url: /people#intro
   type: nav-normal
 
 - title: Register
