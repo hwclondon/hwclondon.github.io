@@ -4,20 +4,40 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ "/assets/hwclondon.css" | relative_url }}">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
     <link rel="webmention" href="https://webmention.io/hwclondon.co.uk/webmention">
-    <link rel="canonical" href="{{ site.root_url }}{{ page.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <link rel="icon" type="image/png" href="{{ site.url }}/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ site.url }}/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+
     <title>{% if page.start %}{{ page.start | date: '%e %B %Y' }} HWC London meeting{% else %}{{ site.title | escape }}{% endif %}</title>
   </head>
   <body>
 
-    <header>
-      {% if page.url == '/' %}
-        <h1>Homebrew Website Club, London</h1>
-      {% else %}
-        <h1><a href="/">Homebrew Website Club, London</a></h1>
-      {% endif %}
+    {% include navigation.html %}
+
+    <header class="intro">
+
+      <img src="/assets/images/hwclondon.jpg" alt="London landscape" />
+
+      {% include londoneye.svg %}
+
+      <div class="caption">
+        {% if page.url == '/' %}
+          <h1>Homebrew Website Club <span>London</span></h1>
+        {% else %}
+          <h1><a href="/">Homebrew Website Club <span>London</span></a></h1>
+        {% endif %}
+
+        <svg class="caption__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487 182.8"><title>IWC</title><style>.st0{fill:#FF5C00;} .st1{clip-path:url(#SVGID_2_);fill:#FF0000;} .st2{clip-path:url(#SVGID_4_);fill:#FF0000;} .st3{fill:#FFB100;} .st4{fill:none;}</style><path class="st0" d="M163.8 33l59.1 126.2 18.6-39.9L201.3 33zm169.1 0h-118l38.8 83.2 20.1 43z"></path><defs><path id="SVGID_1_" d="M33 33h117.8v33H33z"></path></defs><use xlink:href="#SVGID_1_" overflow="visible" fill="#F00"></use><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"></use></clipPath><path class="st1" d="M31.4 31.4h120.9v36.1H31.4z"></path><defs><path id="SVGID_3_" d="M33 78h117.8v71.8H33z"></path></defs><use xlink:href="#SVGID_3_" overflow="visible" fill="#F00"></use><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" overflow="visible"></use></clipPath><path class="st2" d="M31.4 76.5h120.9v74.9H31.4z"></path><path class="st3" d="M453.1 97.9c-3.1 32.4-30.3 57.8-63.5 57.8-35.2 0-63.8-28.6-63.8-63.8S354.3 28 389.6 28c33.1 0 60.3 25.2 63.5 57.5h-63.5c-3.4 0-6.2 2.8-6.2 6.2 0 3.4 2.8 6.2 6.2 6.2h63.5z"></path><path class="st4" d="M0 0h487v182.8H0z"></path></svg>
+      </div>
+
+      <div class="overlay">
+      <svg version="1.1" class="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none"><path fill="#FFFFFF" d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z"/></svg>
+      </div>
+
     </header>
 
     <main>
@@ -43,8 +63,15 @@
       </ul>
     </footer>
 
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
-    <script src="/assets/webmentions-vue.js"></script>
+    <script type="text/javascript" src="{{ site.root_url }}/assets/js/webmentions.js"></script>
+    <script type="text/javascript" src="{{ site.root_url }}/assets/js/main.js">
+
+    </script>
   </body>
 </html>

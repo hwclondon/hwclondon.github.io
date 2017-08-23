@@ -1,0 +1,17 @@
+.button, a.button {
+  background-color: $iw-orange;
+  border:0;
+  padding: 10px 15px;
+  color: #FFF;
+  border-radius: 5px;
+  text-decoration: none;
+
+  &:hover, &:active, &:visited {
+    color:#FFF;
+  }
+
+  &:focus, &:hover {
+    background-color: #efefef;
+    color: #000;
+  }
+}

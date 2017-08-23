@@ -1,0 +1,61 @@
+.navigation-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding: 15px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  @include Small{
+    background-color: transparent;
+    padding: 0;
+    top: 40px;
+  }
+
+  nav {
+
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      padding: 0;
+      margin: auto;
+
+      @include Small{
+        width: 50%;
+        //padding-left: 5%;
+      }
+
+      li {
+        flex-direction: column;
+        list-style: none;
+        font-size: 15px;
+
+        @include Small{
+          font-size: 1.8vw;
+        }
+
+        a {
+          padding: 10px 20px;
+          color: #FFF;
+        }
+
+        @include Small{
+          &.nav-cta {
+            a {
+              background-color: $iw-orange;
+              border:0;
+              padding: 10px 15px;
+              color: #FFF;
+              border-radius: 5px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+}

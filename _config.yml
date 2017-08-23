@@ -9,3 +9,6 @@ defaults:
       path: ''
     values:
       layout: event
+sass:
+    sass_dir: _sass
+    style: compressed

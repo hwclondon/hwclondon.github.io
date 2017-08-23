@@ -1,0 +1,37 @@
+.stand {
+  fill:#CCC;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fill {
+  0% { fill:$iw-orange; }
+  40% { fill:$iw-red; }
+  80% { fill:$iw-yellow; }
+  100% { fill:$iw-orange; }
+}
+
+.wheel {
+  fill:#FFF;
+  transform-origin:50% 50%;
+  animation-name: spin, fill;
+  animation-duration: 300s, 5s;
+  animation-iteration-count: infinite, infinite;
+}
+
+.londoneye {
+  height: 90%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  bottom:-5px;
+  left: 70%;
+  z-index: 2;
+}

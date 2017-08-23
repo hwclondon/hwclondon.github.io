@@ -1,0 +1,180 @@
+.EventAbout {
+  background-color: #FFF;
+
+  .content {
+    @include Medium {
+      flex-direction: row;
+    }
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  &Summary {
+    flex-direction: row;
+    @include Medium {
+      flex-direction: column;
+      flex:1 0 66.666%;
+      padding-right: 30px;
+    }
+  }
+
+  &Next {
+    flex-direction: row;
+    padding: 20px;
+    background-color: $iw-yellow;
+    border-radius: 20px;
+
+    @include Medium {
+      flex-direction: column;
+      flex:1 0 33.333%;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+
+    p, li {
+      font-size: 20px;
+
+      a {
+        color: #000;
+      }
+    }
+
+    p, .tags {
+      position: relative;
+      padding-left: 30px;
+
+      i {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        z-index: 1;
+      }
+    }
+
+    .button {
+      display: block;
+      text-align: center;
+    }
+
+  }
+}
+
+.General {
+  background-color: #FFF;
+  padding-bottom: 10vw;
+
+  h1, h2, h3 {
+    margin-bottom: 0;
+  }
+
+  .content {
+    @include Medium {
+      width: 66.666%;
+      margin:auto;
+    }
+  }
+}
+
+.groups {
+
+  @include Medium {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -20px;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+
+  p {
+    margin: 0;
+    border-bottom:1px solid #CCC;
+    padding-bottom: 20px;
+  }
+
+  article {
+    margin-bottom: 20px;
+
+    @include Medium {
+      flex-direction: column;
+      flex:1 0 50%;
+      padding: 20px;
+      max-width: 50%;
+    }
+
+  }
+
+}
+
+.RegisterSection {
+
+  .EventbriteWidget {
+    margin:2vw auto;
+  }
+
+  ul {
+    padding: 2vw 0 0 0;
+    display: flex;
+    flex-flow: row wrap;
+
+    @include Large {
+      margin: 0 -2vw;
+    }
+  }
+
+  li {
+    flex-flow: row wrap;
+    list-style: none;
+    padding: 2vw 0;
+    margin: 2vw auto;
+    border-top:1px solid $iw-orange;
+    flex:1 0 100%;
+    min-width: 100%;
+
+    @include Large {
+      flex:1 0 33.333%;
+      min-width: 33.333%;
+      flex-direction: column;
+      border-top: none;
+      border-left:1px solid $iw-orange;
+      padding: 0 2vw;
+
+      &:first-child {
+        border:none;
+      }
+
+    }
+
+    p {
+      margin: 0 0 2vw 0;
+
+      strong {
+        display: inline-block;
+        color: $iw-orange;
+      }
+    }
+
+  }
+
+
+  &Info {
+    width: 100%;
+  }
+
+  &Link {
+    width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+---
+layout: default
+title: Meetups
+---
+
+<h1 id="intro">Previous meetups</h1>
+<p>Our previous events are all listed here including any details about topics discussed and website or feature demos.</p>
+
+<section class="groups">
+{% assign upcoming_events = site.events | sort: 'end' | reverse %}
+{% assign now_d = site.time | date: '%F' %}
+{% for event in upcoming_events %}
+  {% assign start_d = event.start | date: '%F' %}
+  {% if start_d <= now_d %}
+  <article>
+    <h3><a href="{{ event.start | date: '%Y%m%d' }}">{{ event.title }}</a></h3>
+    <p>
+      <span class="date">{{ event.date }}</span>
+    </p>
+  </article>
+  {% endif %}
+{% endfor %}
+</section>

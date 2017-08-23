@@ -1,0 +1,31 @@
+$micro : 30em;
+$small : 37.5em;
+$medium : 48em;
+$large : 62em;
+$x-large : 86.375em;
+
+@mixin Small {
+  @media screen and (min-width: $small ) {
+    @content;
+  }
+}
+@mixin Medium {
+  @media screen and (min-width: $medium) {
+    @content;
+  }
+}
+@mixin Large {
+  @media screen and (min-width: $large ) {
+    @content;
+  }
+}
+@mixin xLarge {
+  @media screen and (min-width: $x-large ) {
+    @content;
+  }
+}
+@mixin xSmall {
+  @media screen and (min-width: $micro ) {
+    @content;
+  }
+}

@@ -3,49 +3,49 @@ layout: default
 ---
 
 <div class="h-card p-author" hidden>
-  <img class="u-photo" src="/assets/hwclondon.png" alt="HWC London logo">
+  <img class="u-photo" src="/assets/images/hwclondon.png" alt="HWC London logo" />
   <a class="u-url p-name" href="https://hwclondon.co.uk">Homebrew Website Club, London</a>
 </div>
 
-{% assign sorted_events = site.events | sort: 'end' | reverse %}
-{% for next_event in sorted_events %}
-  {% if next_event.end >= site.time %}
-    <section class="box h-event">
-      <h2 class="p-name">
-        <a href="{{ next_event.url }}">Next meeting</a>
-      </h2>
-      <p>
-        <i class="fa fa-calendar"></i>
-        <time class="dt-start" datetime="{{ next_event.start }}">
-          {{ next_event.start | date: '%A %e %B %Y at %l%P' }}
-        </time>
-        &mdash;
-        <time class="dt-end" datetime="{{ next_event.end }}">
-          {{ next_event.end | date: '%l%P' }}.
-        </time>
-      </p>
-      {% assign venue=site.data.venues['wework-sbc'] %}
-      {% include venue.html venue=venue %}
-      {% include tags.html %}
-      <p>
-        <strong>
-          If you wish to attend you must <a href="#rsvp">RSVP</a>.
-        </strong>
-      </p>
-      <p class="p-summary">
-        Finish that blog post you’ve been working on.
-        Demos of personal websites and technology.
-        Discussion around the independent web.
-        Join a community with like-minded interests.
-        Bring friends that want a personal site!
-      </p>
-    </section>
-    {% break %}
-  {% endif %}
-{% endfor %}
+<section class="EventAbout">
+  <div class="content">
+    <div class="EventAboutSummary">
+      <p><strong>Join us at our fortnightly meetup</strong></p>
+      <p>Finish that blog post you’ve been working on. Demos of personal websites and technology. Discussion around the independent web. Join a community with like-minded interests. Bring friends that want a personal site!</p>
+    </div>
+    <div class="EventAboutNext">
+      {% assign sorted_events = site.events | sort: 'end' | reverse %}
+      {% for next_event in sorted_events %}
+        {% if next_event.end >= site.time %}
+          <section class="box h-event">
+            <h3 class="p-name">
+              <a href="{{ next_event.url }}">Next meeting</a>
+            </h3>
+            <p>
+              <i class="fa fa-calendar"></i>
+              <time class="dt-start" datetime="{{ next_event.start }}">
+                {{ next_event.start | date: '%A %e %B %Y at %l%P' }}
+              </time>
+              &mdash;
+              <time class="dt-end" datetime="{{ next_event.end }}">
+                {{ next_event.end | date: '%l%P' }}.
+              </time>
+            </p>
+            {% assign venue=site.data.venues['wework-sbc'] %}
+            {% include venue.html venue=venue %}
+            {% include tags.html %}
+          </section>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      <a href="#register" class="button">Register</a>
+    </div>
+  </div>
+</section>
 
 <section>
-  <h2>What is Homebrew Website Club?</h2>
+
+  <h3>What is Homebrew Website Club?</h3>
   <p>
     <a href="https://indieweb.org/Homebrew_Website_Club">Homebrew Website
     Club</a> is a fortnightly meetup of people passionate about or
@@ -57,10 +57,13 @@ layout: default
     Whether you're just starting out with your own website or you want to
     discuss the latest IndieWeb technologies you're welcome to join us.
   </p>
+  <a href="/about/#intro" class="button">About IndieWeb</a>
 </section>
 
+<hr>
+
 <section>
-  <h2>When do you meet and where?</h2>
+  <h3>When do you meet and where?</h3>
   <p>
     We mostly meet every other Wednesday from 6pm until roughly 8pm. This page
     shows the next event, or you can
@@ -74,25 +77,32 @@ layout: default
   </p>
 </section>
 
-<section>
-  <h2 id="rsvp">Join us!</h2>
-  {% include rsvp_help.html %}
-</section>
+<hr>
 
 <section>
-  <h2>Previous meetings</h2>
-  <ol>
+  <h3>Recent meetings</h3>
+  <ol class="CalendarListing">
     {% assign upcoming_events = site.events | sort: 'end' | reverse %}
     {% assign now_d = site.time | date: '%F' %}
-    {% for event in upcoming_events %}
+    {% for event in upcoming_events limit:3 %}
       {% assign start_d = event.start | date: '%F' %}
       {% if start_d <= now_d %}
         <li>
-          <a href="{{ event.start | date: '%Y%m%d' }}">
-            {{ event.start | date: '%e %B %Y' }}
+          <a href="{{ event.start | date: '%Y%m%d' }}" class="CalenderBlock">
+            <div>
+              <time class="CalendarDate CalendarDate--range" datetime="{{ event.start | date: '%Y%m%d' }}">
+                <span class="CalendarDate-header">{{ event.start | date: '%B' }}</span>
+                <span class="CalendarDate-body">{{ event.start | date: '%-d' }}</span>
+              </time>
+            </div>
           </a>
+          <div class="CalendarDetail">
+            {% include venue.html venue=venue %}
+          </div>
         </li>
       {% endif %}
     {% endfor %}
   </ol>
 </section>
+
+{% include rsvp.html %}

@@ -1,0 +1,32 @@
+---
+layout: default
+title: People
+attendees:
+- https://doubleloop.net/
+- https://web.manuelpueyo.tech/
+- https://calumryan.com/
+- http://www.kevinmarks.com/
+- https://martinheathsjournal.blog/
+- https://mey.vn/
+- https://barryfrost.com/
+---
+
+<h1 id="intro">Who are we?</h1>
+<p>Our community continues to grow with new people of all backgrounds and abilities. If you’d like to get featured here with your personal website then come along to one of our future events.</p>
+
+<section class="groups">
+{% for attendee in page.attendees %}
+  <article>
+    <h3>
+    {% if site.data.attendees contains attendee %}
+      <a class="u-url p-name" href="{{ attendee }}">
+        {{ site.data.attendees[attendee].name }}
+        <br><small>{{ attendee }}</small>
+      </a>
+    {% else %}
+      <span class="p-name">{{ attendee }}</span>
+    {% endif %}
+    </h3>
+  </article>
+{% endfor %}
+</section>
