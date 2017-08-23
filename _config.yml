@@ -3,7 +3,7 @@ root_url: https://hwclondon.co.uk
 collections:
   events:
     output: true
-    permalink: /:path
+    permalink: /meetups/:path
 defaults:
   - scope:
       path: ''
@@ -12,3 +12,5 @@ defaults:
 sass:
     sass_dir: _sass
     style: compressed
+plugins:
+  - jekyll-redirect-from
