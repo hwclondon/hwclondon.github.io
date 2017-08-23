@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+    <link rel="stylesheet" href="{{ site.root_url }}/assets/css/main.css">
     <link rel="webmention" href="https://webmention.io/hwclondon.co.uk/webmention">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="canonical" href="{{ root_url.url }}{{ page.url }}">
 
-    <link rel="icon" type="image/png" href="{{ site.url }}/assets/images/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ site.url }}/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ site.root_url }}/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ site.root_url }}/assets/images/favicons/favicon-16x16.png" sizes="16x16">
 
     <title>{% if page.start %}{{ page.start | date: '%e %B %Y' }} HWC London meeting{% else %}{{ site.title | escape }}{% endif %}</title>
   </head>
