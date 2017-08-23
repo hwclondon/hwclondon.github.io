@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ "/assets/hwclondon.css" | relative_url }}">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="webmention" href="https://webmention.io/hwclondon.co.uk/webmention">
+    <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention">
     <link rel="canonical" href="{{ site.root_url }}{{ page.url }}">
     <title>{% if page.start %}{{ page.start | date: '%e %B %Y' }} HWC London meeting{% else %}{{ site.title | escape }}{% endif %}</title>
   </head>
@@ -43,11 +43,8 @@
       </ul>
     </footer>
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-    <script src="/assets/webmentions.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="/assets/webmentions-vue.js"></script>
   </body>
 </html>
