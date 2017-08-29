@@ -1,5 +1,6 @@
 .stand {
   fill:#CCC;
+  margin-left: -10px;
 }
 
 @keyframes spin {
@@ -20,10 +21,15 @@
 
 .wheel {
   fill:#FFF;
-  transform-origin:50% 50%;
-  animation-name: spin, fill;
-  animation-duration: 300s, 5s;
-  animation-iteration-count: infinite, infinite;
+  animation-name: fill;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.grouped {
+  animation-name: spin;
+  animation-duration: 300s;
+  animation-iteration-count: infinite;
 }
 
 .londoneye {
@@ -34,4 +40,6 @@
   bottom:-5px;
   left: 70%;
   z-index: 2;
+  overflow: visible;
+  box-shadow : 0px -0px 10000px transparent;
 }

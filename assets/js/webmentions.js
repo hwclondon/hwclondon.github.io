@@ -1,3 +1,5 @@
+if ( document.getElementById("webmentions") ) {
+
 new Vue({
 
     el: '#webmentions',
@@ -14,3 +16,5 @@ new Vue({
     }
 
   })
+
+}
