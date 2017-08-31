@@ -1,4 +1,4 @@
-if ( document.getElementById("webmentions") ) {
+//if ( document.getElementById("webmentions") ) {
 
 new Vue({
 
@@ -11,11 +11,10 @@ new Vue({
     mounted() {
       const pageUrl = document.querySelectorAll("link[rel~=canonical]")[0].href
       const apiUrl = "https://webmention.io/api/mentions?jsonp&target="
-      console.log(apiUrl + encodeURIComponent(pageUrl));
       axios.get(apiUrl + encodeURIComponent(pageUrl))
         .then(response => this.rsvps = response.data.links)
     }
 
   })
 
-}
+//}
