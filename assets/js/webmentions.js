@@ -10,6 +10,7 @@ new Vue({
 
     mounted() {
       const pageUrl = document.querySelectorAll("link[rel~=canonical]")[0].href
+      console.log(apiUrl + encodeURIComponent(pageUrl));
       const apiUrl = "https://webmention.io/api/mentions?jsonp&target="
       axios.get(apiUrl + encodeURIComponent(pageUrl))
         .then(response => this.rsvps = response.data.links)
