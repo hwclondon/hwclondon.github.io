@@ -12,7 +12,7 @@
   }
 
   &Summary {
-    flex-direction: row;
+    flex-flow: row wrap;
     @include Medium {
       flex-direction: column;
       flex:1 0 66.666%;
