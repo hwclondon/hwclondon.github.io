@@ -80,26 +80,24 @@ layout: default
 <hr>
 
 <section>
-  <h3>Recent meetings</h3>
+  <h3>Upcoming meetings</h3>
   <ol class="CalendarListing">
-    {% assign upcoming_events = site.events | sort: 'end' | reverse %}
-    {% assign now_d = site.time | date: '%F' %}
-    {% for event in upcoming_events limit:3 %}
-      {% assign start_d = event.start | date: '%F' %}
-      {% if start_d <= now_d %}
+    {% assign sorted_events = site.events | sort: 'end' | reverse %}
+    {% for next_event in sorted_events %}
+      {% if next_event.end >= site.time %}
         <li>
-          <a href="{{ event.start | date: '%Y%m%d' }}" class="CalenderBlock">
+          <a href="{{ next_event.start | date: '%Y%m%d' }}" class="CalenderBlock">
             <div>
-              <time class="CalendarDate CalendarDate--range" datetime="{{ event.start | date: '%Y%m%d' }}">
-                <span class="CalendarDate-header">{{ event.start | date: '%B' }}</span>
-                <span class="CalendarDate-body">{{ event.start | date: '%-d' }}</span>
+              <time class="CalendarDate CalendarDate--range" datetime="{{ next_event.start | date: '%Y%m%d' }}">
+                <span class="CalendarDate-header">{{ next_event.start | date: '%B' }}</span>
+                <span class="CalendarDate-body">{{ next_event.start | date: '%-d' }}</span>
               </time>
             </div>
           </a>
           <div class="CalendarDetail">
             {% include venue.html venue=venue %}
           </div>
-        </li>
+        {% break %}
       {% endif %}
     {% endfor %}
   </ol>

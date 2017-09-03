@@ -3,7 +3,25 @@ layout: default
 title: Meetups
 ---
 
-<h1 id="intro">Previous meetups</h1>
+
+<h1 id="intro">Upcoming meetups</h1>
+
+<section class="groups">
+  {% assign sorted_events = site.events | sort: 'end' | reverse %}
+  {% for next_event in sorted_events %}
+    {% if next_event.end >= site.time %}
+  <article>
+    <h3><a href="{{ next_event.start | date: '%Y%m%d' }}">{{ next_event.title }}</a></h3>
+    <p>
+      <span class="date">{{ next_event.date }}</span>
+    </p>
+  </article>
+  {% break %}
+{% endif %}
+{% endfor %}
+</section>
+
+<h2>Previous meetups</h2>
 <p>Our previous events are all listed here including any details about topics discussed and website or feature demos.</p>
 
 <section class="groups">
