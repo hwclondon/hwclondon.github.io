@@ -9,6 +9,29 @@
     <link rel="webmention" href="https://webmention.io/hwclondon.co.uk/webmention">
     <link rel="canonical" href="{{ site.root_url }}{{ page.url }}">
 
+
+    {% if page.title %}<meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@hwclondon" />
+    <meta name="twitter:site:id" content="875062885743042561" />
+    <meta name="twitter:creator" content="@hwclondon" />
+    <meta name="twitter:creator:id" content="875062885743042561" />
+    <meta name="twitter:url" content="{{ site.root_url }}{{ page.url }}" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page.description }}" />
+    <meta name="twitter:image" content="{{ site.root_url }}/assets/images/meta.jpg">
+    <meta name="og:title" content="{{ page.title }}" />
+    <meta name="og:description" content="{{ page.description }}" />
+    <meta name="og:url" content="{{ site.root_url }}{{ page.url }}" />
+    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:url" content="{{ site.root_url }}{{ page.url }}">
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta property="og:image" content="{{ site.root_url }}/assets/images/meta.jpg"/>
+    <meta property="og:site_name" content="{{ site.name }}"/>
+    <meta property="og:type" content="blog"/>{% endif %}
+
+    <link rel="canonical" href="https://calumryan.com{{ page.url }}">
+
+
     <link rel="icon" type="image/png" href="{{ site.root_url }}/assets/images/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ site.root_url }}/assets/images/favicons/favicon-16x16.png" sizes="16x16">
 
