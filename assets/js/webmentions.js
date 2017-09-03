@@ -14,6 +14,10 @@ new Vue({
 
       axios.get(apiUrl + encodeURIComponent(pageUrl))
         .then(response => this.rsvps = response.data.links)
+        .catch(e => {
+          console.log(this.errors.push(e));
+        })
+
     }
 
   })

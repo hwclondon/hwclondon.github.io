@@ -32,27 +32,22 @@ layout: default
   <section>
     <hr>
     <h2>RSVPs</h2>
-    <div id="webmentions"></div>
-    {% raw %}
-      <script id="template" type="x-tmpl-mustache">
-        <ul class="attendees">
-          {{#rsvps}}
-            <li>
-              <i class="fa {{icon}}"></i>
-              <a href="{{url}}">
-                <img src="{{author.photo}}" alt="{{author.name}}">
-                {{author.name}}
-              </a>
-              {{label}}
-            </li>
-          {{/rsvps}}
-        </ul>
-      </script>
-    {% endraw %}
+
+    <ul id="webmentions">
+      {% raw %}
+      <li v-for="rsvp in rsvps">
+        <i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
+        <a :href="rsvp.data.url">
+          <img :src="rsvp.data.author.photo">
+          {{rsvp.data.author.name}}
+        </a>
+      </li>
+      {% endraw %}
+    </ul>
+
     {% include rsvp.html %}
   </section>
 {% endif %}
-
 
 
 {% if page.photo or page.attendees %}
