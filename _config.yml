@@ -1,4 +1,5 @@
 title: Homebrew Website Club, London
+description: "Finish that blog post you’ve been working on. Demos of personal websites and technology. Discussion around the independent web. Join a community with like-minded interests. Bring friends that want a personal site!"
 #root_url: http://127.0.0.1:4000
 root_url: https://hwclondon.co.uk
 collections:
