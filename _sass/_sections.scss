@@ -15,15 +15,22 @@
     @include Medium {
       flex-direction: column;
       flex:1 0 66.666%;
-      padding-right: 30px;
+
+      .inner {
+        padding-right: 30px;
+      }
+
     }
   }
 
   &Next {
     flex-direction: row;
-    padding: 20px;
     background-color: $iw-yellow;
     border-radius: 20px;
+
+    .inner {
+      padding: 20px;
+    }
 
     @include Medium {
       flex-direction: column;

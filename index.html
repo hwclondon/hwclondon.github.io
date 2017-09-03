@@ -10,10 +10,13 @@ layout: default
 <section class="EventAbout">
   <div class="content">
     <div class="EventAboutSummary">
+      <div class="inner">
       <p><strong>Join us at our fortnightly meetup</strong></p>
       <p>Finish that blog post you’ve been working on. Demos of personal websites and technology. Discussion around the independent web. Join a community with like-minded interests. Bring friends that want a personal site!</p>
+      </div>
     </div>
     <div class="EventAboutNext">
+      <div class="inner">
       {% assign sorted_events = site.events | sort: 'end' | reverse %}
       {% for next_event in sorted_events %}
         {% if next_event.end >= site.time %}
@@ -39,6 +42,7 @@ layout: default
         {% endif %}
       {% endfor %}
       <a href="#register" class="button">Register</a>
+      </div>
     </div>
   </div>
 </section>
