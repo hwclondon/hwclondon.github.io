@@ -33,13 +33,12 @@ layout: default
     <hr>
     <h2>RSVPs</h2>
 
-    <ul id="webmentions">
+    <ul id="webmentions" class="rsvps">
       {% raw %}
       <li v-for="rsvp in rsvps">
-        <i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
         <a :href="rsvp.data.url">
           <img :src="rsvp.data.author.photo">
-          {{rsvp.data.author.name}}
+          <div class="rsvps-name"><i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i> {{rsvp.data.author.name}}</div>
         </a>
       </li>
       {% endraw %}

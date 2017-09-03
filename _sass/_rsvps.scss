@@ -1,0 +1,39 @@
+.rsvps {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  align-items: self-start;
+
+  &-name {
+    font-size: 15px;
+    text-align: center;
+    max-width: 80%;
+    margin: 10px auto auto auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 33.333%;
+    max-width: 33.333%;
+    list-style: none;
+    margin-bottom: 20px;
+
+    a {
+      text-decoration: none;
+      padding: 0 10px;
+      flex-direction: column;
+      height: 100%;
+      color: #000;
+    }
+
+    img {
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+    }
+
+  }
+}
