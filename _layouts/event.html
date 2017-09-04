@@ -4,78 +4,81 @@ layout: default
 <div class="h-event">
 <a rel="author" href="/" hidden></a>
 
-<section>
-  <h2 id="intro">Meeting details</h2>
-  <span hidden class="p-name">{{ page.start | date: '%e %B %Y' }} HWC London meeting</span>
-  <p>
-    <i class="fa fa-calendar"></i>
-    <time class="dt-start" datetime="{{ page.start }}">
-      {{ page.start | date: '%A %e %B %Y at %l%P' }}
-    </time>
-    &mdash;
-    <time class="dt-end" datetime="{{ page.end }}">
-      {{ page.end | date: '%l%P' }}.
-    </time>
-  </p>
-  {% assign venue=site.data.venues[page.venue] %}
-  {% include venue.html venue=venue %}
-  {% include tags.html %}
-</section>
+<div class="entry-content e-content">
 
-{% if content.length %}
   <section>
-    {{ content }}
+    <h2 id="intro">Meeting details</h2>
+    <span hidden class="p-name">{{ page.start | date: '%e %B %Y' }} HWC London meeting</span>
+    <p>
+      <i class="fa fa-calendar"></i>
+      <time class="dt-start" datetime="{{ page.start }}">
+        {{ page.start | date: '%A %e %B %Y at %l%P' }}
+      </time>
+      &mdash;
+      <time class="dt-end" datetime="{{ page.end }}">
+        {{ page.end | date: '%l%P' }}.
+      </time>
+    </p>
+    {% assign venue=site.data.venues[page.venue] %}
+    {% include venue.html venue=venue %}
+    {% include tags.html %}
   </section>
-{% endif %}
 
-{% if site.time < page.start %}
-  <section>
-    <hr>
-    <h2>RSVPs</h2>
+  {% if content %}
+    <section class="p-summary description">
+      {{ content }}
+    </section>
+  {% endif %}
 
-    <ul id="webmentions" class="rsvps">
-      {% raw %}
-      <li v-for="rsvp in rsvps">
-        <a :href="rsvp.data.url">
-          <img :src="rsvp.data.author.photo">
-          <div class="rsvps-name"><i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i> {{rsvp.data.author.name}}</div>
-        </a>
-      </li>
-      {% endraw %}
-    </ul>
+  {% if site.time < page.start %}
+    <section>
+      <hr>
+      <h2>RSVPs</h2>
 
-    {% include rsvp.html %}
-  </section>
-{% endif %}
-
-
-{% if page.photo or page.attendees %}
-  <section>
-    <hr>
-    <h2>Attendees</h2>
-    {% if page.photo %}
-      <figure class="photo">
-        <a href="/photos/{{ page.photo }}">
-          <img src="/photos/{{ page.photo }}" class="u-photo" alt="Group photo from HWC London.">
-        </a>
-        <figcaption>HWC London group photo (L-R):</figcaption>
-      </figure>
-    {% endif %}
-    <ul>
-      {% for attendee in page.attendees %}
-        <li class="u-category h-card">
-          <i class="fa fa-user-circle"></i>
-          {% if site.data.attendees contains attendee %}
-            <a class="u-url p-name" href="{{ attendee }}">
-              {{ site.data.attendees[attendee].name }}
-            </a>
-          {% else %}
-            <span class="p-name">{{ attendee }}</span>
-          {% endif %}
+      <ul id="webmentions" class="rsvps">
+        {% raw %}
+        <li v-for="rsvp in rsvps">
+          <a :href="rsvp.data.url">
+            <img :src="rsvp.data.author.photo">
+            <div class="rsvps-name"><i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i> {{rsvp.data.author.name}}</div>
+          </a>
         </li>
-      {% endfor %}
-    </ul>
-  </section>
-{% endif %}
+        {% endraw %}
+      </ul>
 
+      {% include rsvp.html %}
+    </section>
+  {% endif %}
+
+
+  {% if page.photo or page.attendees %}
+    <section>
+      <hr>
+      <h2>Attendees</h2>
+      {% if page.photo %}
+        <figure class="photo">
+          <a href="/photos/{{ page.photo }}">
+            <img src="/photos/{{ page.photo }}" class="u-photo" alt="Group photo from HWC London.">
+          </a>
+          <figcaption>HWC London group photo (L-R):</figcaption>
+        </figure>
+      {% endif %}
+      <ul>
+        {% for attendee in page.attendees %}
+          <li class="u-category h-card">
+            <i class="fa fa-user-circle"></i>
+            {% if site.data.attendees contains attendee %}
+              <a class="u-url p-name" href="{{ attendee }}">
+                {{ site.data.attendees[attendee].name }}
+              </a>
+            {% else %}
+              <span class="p-name">{{ attendee }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  </div>
 </div>
