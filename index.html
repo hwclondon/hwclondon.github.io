@@ -92,7 +92,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
     {% for next_event in sorted_events %}
       {% if next_event.end >= site.time %}
         <li>
-          <a href="{{ next_event.start | date: '%Y%m%d' }}" class="CalenderBlock">
+          <a href="{{ next_event.url }}" class="CalenderBlock">
             <div>
               <time class="CalendarDate CalendarDate--range" datetime="{{ next_event.start | date: '%Y%m%d' }}">
                 <span class="CalendarDate-header">{{ next_event.start | date: '%B' }}</span>
