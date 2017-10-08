@@ -24,9 +24,19 @@ layout: default
     {% include tags.html %}
   </section>
 
+  {% if site.time < page.start %}
   <section class="p-summary description">
     {{ page.full_description }}
   </section>
+  {% else %}
+    {% if content %}
+    <section>
+      <hr>
+      <h2>Event roundup</h2>
+      {{ content }}
+    </section>
+    {% endif %}
+  {% endif %}
 
   {% if site.time < page.start %}
     <section>
@@ -76,14 +86,6 @@ layout: default
         {% endfor %}
       </ul>
     </section>
-  {% endif %}
-
-  {% if content %}
-  <section>
-    <hr>
-    <h2>Event roundup</h2>
-    {{ content }}
-  </section>
   {% endif %}
 
   </div>
