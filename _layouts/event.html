@@ -46,10 +46,12 @@ layout: default
       <ul id="webmentions" class="rsvps">
         {% raw %}
         <li v-for="rsvp in rsvps">
+          {{#if rsvp.data.author.name}}
           <a :href="rsvp.data.url">
-
+            <img :src="rsvp.data.author.photo">
             <div class="rsvps-name"><i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i> {{rsvp.data.author.name}}</div>
           </a>
+          {{/if}}
         </li>
         {% endraw %}
       </ul>
