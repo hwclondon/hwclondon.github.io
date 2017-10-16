@@ -47,9 +47,7 @@ layout: default
         {% raw %}
         <li v-for="rsvp in rsvps">
           <a :href="rsvp.data.url">
-            {{#if rsvp.data.author.photo}}
-            <img :src="rsvp.data.author.photo">
-            {{/if}}
+
             <div class="rsvps-name"><i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i> {{rsvp.data.author.name}}</div>
           </a>
         </li>
