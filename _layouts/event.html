@@ -51,6 +51,7 @@ layout: default
             <img :src="rsvp.data.author.photo">
             <div class="rsvps-name"><i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i> {{rsvp.data.author.name}}</div>
           </a>
+          <template v-else>
           </template>
         </li>
         {% endraw %}
