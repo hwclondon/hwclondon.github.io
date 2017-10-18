@@ -42,13 +42,17 @@ layout: default
     <section>
       <hr>
       <h2>RSVPs</h2>
+      <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
 
       <ul id="webmentions" class="rsvps">
         {% raw %}
         <li v-for="rsvp in rsvps" v-if="rsvp.data.rsvp">
           <a :href="rsvp.data.url">
             <img :src="rsvp.data.author.photo">
-            <div class="rsvps-name"><i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i> {{rsvp.data.author.name}}</div>
+            <div class="rsvps-name">
+              <i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
+              <span v-text="rsvp.data.author.name"></span>
+            </div>
           </a>
         </li>
         {% endraw %}
