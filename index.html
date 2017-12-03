@@ -15,11 +15,6 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
       <div class="inner">
       <p><strong>Join us at our fortnightly meetup</strong></p>
       <p>Finish that blog post you’ve been working on. Demos of personal websites and technology. Discussion around the independent web. Join a community with like-minded interests. Bring friends that want a personal site!</p>
-      <p>Other upcoming IndieWeb events in London:</p>
-      <ul>
-        <li><strong><a href="https://viewsourceconf.org/london-2017/speakers/jeremy-keith/" class="p-name summary" target="_blank" rel="noreferrer noopener">Building Blocks of the Indie Web</a></strong>  by Jeremy Keith (October 27th)</li>
-        <li><strong><a href="https://mozillafestival.org/" class="p-name summary" target="_blank" rel="noreferrer noopener">Introducing the IndieWeb movement</a></strong> by Calum Ryan (October 28th)</li>
-      </ul>
 
       </div>
     </div>
@@ -35,14 +30,14 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
             <p>
               <i class="fa fa-calendar"></i>
               <time class="dt-start" datetime="{{ next_event.start }}">
-                {{ next_event.start | date: '%A %e %B %Y at %l%P' }}
+                {{ next_event.start | date: '%A %e %B %Y at %l:%M%P' }}
               </time>
               &mdash;
               <time class="dt-end" datetime="{{ next_event.end }}">
-                {{ next_event.end | date: '%l%P' }}.
+                {{ next_event.end | date: '%l:%M%P' }}.
               </time>
             </p>
-            {% assign venue=site.data.venues['wework-sbc'] %}
+            {% assign venue=site.data.venues['thehub-coventgarden'] %}
             {% include venue.html venue=venue %}
             {% include tags.html %}
           </section>
@@ -80,12 +75,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
     We mostly meet every other Wednesday from 6pm until roughly 8pm. This page
     shows the next event, or you can
     <a href="https://twitter.com/hwclondon">follow us on Twitter</a> for
-    announcements or other news.
-  </p>
-  <p>
-    As of 12 July 2017 we have a new venue:
-    <a href="https://www.wework.com/buildings/south-bank-central--london">
-      WeWork South Bank Central</a>.
+    announcements or other news. We usually meetup at <strong>hub by Premier Inn London Covent Garden</strong> but keep an eye out on the event page for any future changes. If you have a suitable venue to host future events then please let us know.
   </p>
 </section>
 
@@ -108,6 +98,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
           </a>
           <div class="CalendarDetail">
             {% include venue.html venue=venue %}
+            <a class="eventdetail" href="{{ next_event.url }}#intro">Event details &raquo;</a>
           </div>
         {% break %}
       {% endif %}

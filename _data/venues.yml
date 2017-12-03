@@ -4,3 +4,9 @@ wework-sbc:
   street_address: 30 Stamford Street
   locality: London
   postal_code: SE1&nbsp;9LQ
+thehub-coventgarden:
+  name: hub by Premier Inn London Covent Garden
+  url: http://www.openstreetmap.org/?mlat=51.5101498&mlon=-0.1271938&zoom=12#map=16/51.5098/-0.1288
+  street_address: 110 St Martin's Lane
+  locality: London
+  postal_code: WC2N&nbsp;4BA

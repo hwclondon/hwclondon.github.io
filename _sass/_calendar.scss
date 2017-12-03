@@ -63,6 +63,7 @@
       color: #000;
     }
 
+
     p {
       margin: auto;
     }
@@ -72,4 +73,15 @@
 .CalendarDetail {
   flex-shrink: 1;
   margin-left: 15px;
+}
+
+.CalendarListing li {
+  a.eventdetail {
+    color:#3ca2c3;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
