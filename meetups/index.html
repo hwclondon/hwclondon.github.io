@@ -5,6 +5,7 @@ description: Events listing for Homebrew Website Club London past and upcoming
 ---
 
 
+{% if site.upcoming != false }
 <h1 id="intro">Upcoming meetups</h1>
 
 <section class="groups">
@@ -18,6 +19,7 @@ description: Events listing for Homebrew Website Club London past and upcoming
 {% endif %}
 {% endfor %}
 </section>
+{% endif %}
 
 <h2>Previous meetups</h2>
 <p>Our previous events are all listed here including any details about topics discussed and website or feature demos.</p>

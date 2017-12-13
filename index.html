@@ -18,6 +18,8 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
 
       </div>
     </div>
+
+    {% if site.upcoming != false }
     <div class="EventAboutNext">
       <div class="inner">
       {% assign sorted_events = site.events | sort: 'end' | reverse %}
@@ -47,6 +49,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
       <a href="#register" class="button">Register</a>
       </div>
     </div>
+    {% endif %}
   </div>
 </section>
 
@@ -81,6 +84,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
 
 <hr>
 
+{% if site.upcoming != false }
 <section>
   <h3>Upcoming meetings</h3>
   <ol class="CalendarListing">
@@ -107,3 +111,4 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
 </section>
 
 {% include rsvp.html %}
+{% endif %}
