@@ -19,7 +19,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
       </div>
     </div>
 
-    {% if site.upcoming != false }
+    {% if site.upcoming == true %}
     <div class="EventAboutNext">
       <div class="inner">
       {% assign sorted_events = site.events | sort: 'end' | reverse %}
