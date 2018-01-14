@@ -27,7 +27,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
         {% if next_event.end >= site.time %}
           <section class="box h-event">
             <h3 class="p-name">
-              <a href="{{ next_event.url }}">Next meeting</a>
+              <a href="{{ next_event.url }}#intro">Next meeting</a>
             </h3>
             <p>
               <i class="fa fa-calendar"></i>
@@ -84,7 +84,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
 
 <hr>
 
-{% if site.upcoming != false }
+{% if site.upcoming != false %}
 <section>
   <h3>Upcoming meetings</h3>
   <ol class="CalendarListing">
