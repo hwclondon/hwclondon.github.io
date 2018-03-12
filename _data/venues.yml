@@ -4,6 +4,12 @@ wework-sbc:
   street_address: 30 Stamford Street
   locality: London
   postal_code: SE1&nbsp;9LQ
+thehub-bricklane:
+  name: hub by Premier Inn London Brick Lane
+  url: http://www.openstreetmap.org/?mlat=51.51929&mlon=-0.07130&zoom=12#map=16/51.51929/-0.07130
+  street_address: 86 Brick Lane
+  locality: London
+  postal_code: E1&nbsp;6RL
 thehub-coventgarden:
   name: hub by Premier Inn London Covent Garden
   url: http://www.openstreetmap.org/?mlat=51.5101498&mlon=-0.1271938&zoom=12#map=16/51.5098/-0.1288

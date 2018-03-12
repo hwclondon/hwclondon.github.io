@@ -39,7 +39,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
                 {{ next_event.end | date: '%l:%M%P' }}.
               </time>
             </p>
-            {% assign venue=site.data.venues['thehub-coventgarden'] %}
+            {% assign venue=site.data.venues['thehub-bricklane'] %}
             {% include venue.html venue=venue %}
             {% include tags.html %}
           </section>
@@ -78,7 +78,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
     We mostly meet every other Wednesday from 6pm until roughly 8pm. This page
     shows the next event, or you can
     <a href="https://twitter.com/hwclondon">follow us on Twitter</a> for
-    announcements or other news. We usually meetup at <strong>hub by Premier Inn London Covent Garden</strong> but keep an eye out on the event page for any future changes. If you have a suitable venue to host future events then please let us know.
+    announcements or other news. We usually meetup at <strong>hub by Premier Inn</strong> but keep an eye out on the event page for any future changes. If you have a suitable venue to host future events then please let us know.
   </p>
 </section>
 
@@ -101,7 +101,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
             </div>
           </a>
           <div class="CalendarDetail">
-            {% include venue.html venue=venue %}
+            {% include venue.html %}
             <a class="eventdetail" href="{{ next_event.url }}#intro">Event details &raquo;</a>
           </div>
         {% break %}
