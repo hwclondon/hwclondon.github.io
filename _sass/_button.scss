@@ -1,9 +1,10 @@
-.button, a.button {
+.button, a.button, .tito-tickets-button {
   background-color: $iw-orange;
   border:0;
   padding: 10px 15px;
   color: #FFF;
   border-radius: 5px;
+  font-family: 'Titillium Web';
   text-decoration: none;
 
   &:hover, &:active, &:visited {
