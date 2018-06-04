@@ -10,15 +10,15 @@
     <ul>
       <li><p><strong>Indie RSVP</strong><br/>Able to send via <a href="https://indieweb.org/webmentions">Webmentions</a>? then RSVP your attendance to the <a href="{{ site.root_url }}/meetups/{{ next_event.start | date: '%Y%m%d' }}">next event</a>.</p><p>Webmention target for next event: <small class="dont-break-out">{{ site.root_url }}/meetups/{{ next_event.start | date: '%Y%m%d' }}</small></p></li>
       <li><p><strong>IndieWeb.org</strong><br>If you're able to use your own domain name to sign in to websites including IndieWeb.org then add yourself to the <a href="http://indieweb.org/next-hwc">next London event</a> listed there.</p></li>
-      {% if next_event.eventbrite %}
+      {% if next_event.tito %}
       <li>
         <div class="RegisterSectionInfo">
-          <p><strong>Eventbrite</strong><br>New to IndieWeb? simply register you're attending on the Eventbrite page.</p>
+          <p><strong>Tito</strong><br>New to IndieWeb? simply register you're attending on the Tito page.</p>
         </div>
         <div class="RegisterSectionLink">
-          <div class="EventbriteWidget">
-            <iframe src="//eventbrite.co.uk/tickets-external?eid={{ next_event.eventbrite }}&ref=etckt" frameborder="0" height="275" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:12px; padding:10px 0 5px; margin:2px; width:100%; text-align:left;" ><a class="powered-by-eb" style="color: #ADB0B6; text-decoration: none;" target="_blank" href="http://www.eventbrite.co.uk/">Powered by Eventbrite</a></div>
-          </div><!-- /EventbriteWidget -->
+          <div class="TitoWidget">
+            <tito-button event="hwclondon/{{next_event.tito}}"></tito-button>
+          </div>
         </div>
       </li>
       {% endif %}

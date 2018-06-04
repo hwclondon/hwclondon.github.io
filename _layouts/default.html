@@ -32,6 +32,8 @@
     <link rel="icon" type="image/png" href="{{ site.root_url }}/assets/images/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ site.root_url }}/assets/images/favicons/favicon-16x16.png" sizes="16x16">
 
+    <script src='https://js.tito.io/v1' async></script>
+
     <title>{% if page.start %}{{ page.start | date: '%e %B %Y' }} HWC London meeting{% else %}{{ site.title | escape }}{% endif %}</title>
   </head>
   <body>
@@ -72,7 +74,7 @@
         &amp;
         <a class="h-card" href="https://barryfrost.com/">Barry Frost</a>.
       </p>
-      <p>See our <a href="{{ site.root_url }}/code-of-conduct#intro">Code of conduct</a></p>
+      <p>Read our <a href="{{ site.root_url }}/code-of-conduct#intro">Code of conduct</a> and <a href="{{ site.root_url }}/privacy#intro">Privacy policy</a>.</p>
       <ul>
         <li>
           <i class="fa fa-twitter"></i>
@@ -80,6 +82,7 @@
         </li>
       </ul>
     </footer>
+
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>

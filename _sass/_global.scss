@@ -65,3 +65,26 @@ hr {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
+
+.flex {
+
+  &-lg {
+    @include Large {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-flow: row wrap;
+      margin: 0 -10px;
+
+      .flex-half {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+
+}

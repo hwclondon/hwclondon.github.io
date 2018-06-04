@@ -4,9 +4,9 @@ layout: default
 <div class="h-event">
 <a rel="author" href="/" hidden></a>
 
-<div class="entry-content e-content">
+<div class="entry-content e-content flex flex-lg">
 
-  <section>
+  <section class="flex-half">
     <h2 id="intro">Meeting details</h2>
     <span hidden class="p-name">{{ page.start | date: '%e %B %Y' }} HWC London meeting</span>
     <p>
@@ -25,6 +25,32 @@ layout: default
   </section>
 
   {% if site.time < page.start %}
+    <section class="flex-half" v-if="rsvp.data.rsvp">
+      <h2>RSVPs</h2>
+      <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
+
+      <ul id="webmentions" class="rsvps">
+        {% raw %}
+        <li v-for="rsvp in rsvps">
+          <a :href="rsvp.data.url">
+            <img :src="rsvp.data.author.photo">
+            <div class="rsvps-name">
+              <i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
+              <span v-text="rsvp.data.author.name"></span>
+            </div>
+          </a>
+        </li>
+        {% endraw %}
+      </ul>
+
+    </section>
+  {% endif %}
+
+  <section>
+      {% include rsvp.html %}
+  </section>
+
+  {% if site.time < page.start %}
   <section class="p-summary description">
     {{ page.full_description }}
   </section>
@@ -37,31 +63,6 @@ layout: default
     </section>
     {% endif %}
   {% endif %}
-
-  {% if site.time < page.start %}
-    <section>
-      <hr>
-      <h2>RSVPs</h2>
-      <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
-
-      <ul id="webmentions" class="rsvps">
-        {% raw %}
-        <li v-for="rsvp in rsvps" v-if="rsvp.data.rsvp">
-          <a :href="rsvp.data.url">
-            <img :src="rsvp.data.author.photo">
-            <div class="rsvps-name">
-              <i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
-              <span v-text="rsvp.data.author.name"></span>
-            </div>
-          </a>
-        </li>
-        {% endraw %}
-      </ul>
-
-      {% include rsvp.html %}
-    </section>
-  {% endif %}
-
 
   {% if page.photo or page.attendees %}
     <section>
