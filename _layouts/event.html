@@ -26,11 +26,11 @@ layout: default
 
   {% if site.time < page.start %}
     {% raw %}
-    <section class="flex-half" v-if="rsvps.length">
+    <section id="webmentions" class="flex-half" v-if="rsvps.length">
       <h2>RSVPs</h2>
       <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
 
-      <ul id="webmentions" class="rsvps">
+      <ul class="rsvps">
 
         <li v-for="rsvp in rsvps">
           <a :href="rsvp.data.url">
