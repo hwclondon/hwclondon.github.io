@@ -25,12 +25,13 @@ layout: default
   </section>
 
   {% if site.time < page.start %}
-    <section class="flex-half" v-if="rsvp.data.rsvp">
+    {% raw %}
+    <section class="flex-half" v-if="rsvps.length">
       <h2>RSVPs</h2>
       <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
 
       <ul id="webmentions" class="rsvps">
-        {% raw %}
+
         <li v-for="rsvp in rsvps">
           <a :href="rsvp.data.url">
             <img :src="rsvp.data.author.photo">
@@ -40,10 +41,11 @@ layout: default
             </div>
           </a>
         </li>
-        {% endraw %}
+
       </ul>
 
     </section>
+    {% endraw %}
   {% endif %}
 
   <section>
