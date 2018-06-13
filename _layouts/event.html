@@ -30,13 +30,44 @@ layout: default
       <h2>RSVPs</h2>
       <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
 
-      <ul class="rsvps">
+      <h3 v-if="rsvp.data.rsvp == 'yes'">Attending</h3>
+      <ul class="rsvps rsvps__yes">
 
-        <li v-for="rsvp in rsvps">
+        <li v-for="rsvp in rsvps" v-if="rsvp.data.rsvp == 'yes'">
           <a :href="rsvp.data.url">
-            <img :src="rsvp.data.author.photo">
+            <img :src="rsvp.data.author.photo" alt="rsvp.data.author.name">
             <div class="rsvps-name">
               <i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
+              <span v-text="rsvp.data.author.name"></span>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+
+      <h3 v-if="rsvp.data.rsvp == 'interested'">Interested</h3>
+      <ul class="rsvps rsvps__interested">
+
+        <li v-for="rsvp in rsvps" v-if="rsvp.data.rsvp == 'interested'">
+          <a :href="rsvp.data.url">
+            <img :src="rsvp.data.author.photo" alt="rsvp.data.author.name">
+            <div class="rsvps-name">
+              <i :class="['fa', rsvp.data.rsvp == 'interested' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
+              <span v-text="rsvp.data.author.name"></span>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+
+      <h3 v-if="rsvp.data.rsvp == 'no'">Not attending</h3>
+      <ul class="rsvps rsvps__no">
+
+        <li v-for="rsvp in rsvps" v-if="rsvp.data.rsvp == 'no'">
+          <a :href="rsvp.data.url">
+            <img :src="rsvp.data.author.photo" alt="rsvp.data.author.name">
+            <div class="rsvps-name">
+              <i :class="['fa', rsvp.data.rsvp == 'no' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
               <span v-text="rsvp.data.author.name"></span>
             </div>
           </a>
