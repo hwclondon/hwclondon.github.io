@@ -25,58 +25,53 @@ layout: default
   </section>
 
   {% if site.time < page.start %}
-    {% raw %}
-    <section id="webmentions" class="flex-half" v-if="rsvps.length">
-      <h2>RSVPs</h2>
+    <section class="flex-half">
       <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
-
-      <h3 v-if="rsvp.data.rsvp == 'yes'">Attending</h3>
-      <ul class="rsvps rsvps__yes">
-
-        <li v-for="rsvp in rsvps" v-if="rsvp.data.rsvp == 'yes'">
-          <a :href="rsvp.data.url">
-            <img :src="rsvp.data.author.photo" alt="rsvp.data.author.name">
-            <div class="rsvps-name">
-              <i :class="['fa', rsvp.data.rsvp == 'yes' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
-              <span v-text="rsvp.data.author.name"></span>
-            </div>
-          </a>
+      <ul id="webmentions" class="rsvps">
+        {% raw %}
+        <li v-if="rsvp.data.rsvp == 'yes'" v-for="rsvp in rsvps">
+          <h2>Attending</h2>
+          <ul>
+            <li :data-rsvp="rsvp.data.published">
+              <a :href="rsvp.data.url">
+                <img :src="rsvp.data.author.photo">
+                <div class="rsvps-name">
+                  <span v-text="rsvp.data.author.name"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
         </li>
-
-      </ul>
-
-      <h3 v-if="rsvp.data.rsvp == 'interested'">Interested</h3>
-      <ul class="rsvps rsvps__interested">
-
-        <li v-for="rsvp in rsvps" v-if="rsvp.data.rsvp == 'interested'">
-          <a :href="rsvp.data.url">
-            <img :src="rsvp.data.author.photo" alt="rsvp.data.author.name">
-            <div class="rsvps-name">
-              <i :class="['fa', rsvp.data.rsvp == 'interested' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
-              <span v-text="rsvp.data.author.name"></span>
-            </div>
-          </a>
-        </li>
-
-      </ul>
-
-      <h3 v-if="rsvp.data.rsvp == 'no'">Not attending</h3>
-      <ul class="rsvps rsvps__no">
-
-        <li v-for="rsvp in rsvps" v-if="rsvp.data.rsvp == 'no'">
-          <a :href="rsvp.data.url">
-            <img :src="rsvp.data.author.photo" alt="rsvp.data.author.name">
-            <div class="rsvps-name">
-              <i :class="['fa', rsvp.data.rsvp == 'no' ? 'fa-calendar-check-o' : 'fa-calendar-times-o']"></i>
-              <span v-text="rsvp.data.author.name"></span>
-            </div>
-          </a>
-        </li>
-
+        <li v-if="rsvp.data.rsvp == 'interested'" v-for="rsvp in rsvps">
+            <h3>Interested</h3>
+            <ul>
+              <li>
+                <a :href="rsvp.data.url">
+                  <img :src="rsvp.data.author.photo">
+                  <div class="rsvps-name">
+                    <span v-text="rsvp.data.author.name"></span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li v-if="rsvp.data.rsvp == 'no'" v-for="rsvp in rsvps">
+              <h3>Not attending</h3>
+              <ul>
+                <li>
+                  <a :href="rsvp.data.url">
+                    <img :src="rsvp.data.author.photo">
+                    <div class="rsvps-name">
+                      <span v-text="rsvp.data.author.name"></span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+        {% endraw %}
       </ul>
 
     </section>
-    {% endraw %}
   {% endif %}
 
   <section>
