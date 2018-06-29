@@ -4,15 +4,17 @@ wework-sbc:
   street_address: 30 Stamford Street
   locality: London
   postal_code: SE1&nbsp;9LQ
-thehub-bricklane:
-  name: hub by Premier Inn London Brick Lane
-  url: http://www.openstreetmap.org/?mlat=51.51929&mlon=-0.07130&zoom=12#map=16/51.51929/-0.07130
-  street_address: 86 Brick Lane
-  locality: London
-  postal_code: E1&nbsp;6RL
 thehub-coventgarden:
   name: hub by Premier Inn London Covent Garden
   url: http://www.openstreetmap.org/?mlat=51.5101498&mlon=-0.1271938&zoom=12#map=16/51.5098/-0.1288
   street_address: 110 St Martin's Lane
   locality: London
   postal_code: WC2N&nbsp;4BA
+  accessibility_info: "<p>For wheelchair users there is an exterior elevator from pavement level to the hotel entrance. From here the cafe is located on the ground floor (step-free). WC facilities are located on the same floor.</p><p>For anyone with sensitivities to excessive noise or crowds: the venue generally isn't very busy or noisy with background music playing only on a low-medium volume.</p>"
+thehub-bricklane:
+  name: hub by Premier Inn London Brick Lane
+  url: http://www.openstreetmap.org/?mlat=51.51929&mlon=-0.07130&zoom=12#map=16/51.51929/-0.07130
+  street_address: 86 Brick Lane
+  locality: London
+  postal_code: E1&nbsp;6RL
+  accessibility_info: "<p>For wheelchair users there is step-free access to the cafe located on the ground floor. WC facilities are located in the basement via the elevator.</p><p>For anyone with sensitivities to excessive noise or crowds: the venue generally isn't very busy or noisy with background music playing only on a low-medium volume.</p>"

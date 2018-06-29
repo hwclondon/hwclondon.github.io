@@ -32,6 +32,15 @@ a:hover, a:focus {
 h2 {
   font-size: 40px;
   line-height: 42px;
+
+  &.heading-flex {
+    display: flex;
+    align-content: center;
+    flex: 1 0 100%;
+    svg {
+      margin: auto 10px auto 0;
+    }
+  }
 }
 
 h3 {
