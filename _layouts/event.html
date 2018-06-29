@@ -81,9 +81,11 @@ layout: default
       <p>If you have any specific accessibility requirements, please <a href="mailto:hwc@calumryan.com">contact us</a> in advance and we'll make sure that we can accomomodate you.</p>
   </section>
 
+  {% if site.time < page.start %}
   <section>
       {% include rsvp.html %}
   </section>
+  {% endif %}
 
   {% if site.time < page.start %}
   <section class="p-summary description">
