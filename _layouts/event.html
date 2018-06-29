@@ -25,14 +25,27 @@ layout: default
   </section>
 
   {% if site.time < page.start %}
-    <section class="flex-half">
-      <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
-      <ul id="webmentions" class="rsvps">
-        {% raw %}
-        <li v-if="rsvp.data.rsvp == 'yes'" v-for="rsvp in rsvps">
-          <h2>Attending</h2>
+  <section class="flex-half">
+    <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
+    <ul id="webmentions" class="rsvps">
+      {% raw %}
+      <li v-if="rsvp.data.rsvp == 'yes'" v-for="rsvp in rsvps">
+        <h2>Attending</h2>
+        <ul>
+          <li :data-rsvp="rsvp.data.published">
+            <a :href="rsvp.data.url">
+              <img :src="rsvp.data.author.photo">
+              <div class="rsvps-name">
+                <span v-text="rsvp.data.author.name"></span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li v-if="rsvp.data.rsvp == 'interested'" v-for="rsvp in rsvps">
+          <h3>Interested</h3>
           <ul>
-            <li :data-rsvp="rsvp.data.published">
+            <li>
               <a :href="rsvp.data.url">
                 <img :src="rsvp.data.author.photo">
                 <div class="rsvps-name">
@@ -42,8 +55,8 @@ layout: default
             </li>
           </ul>
         </li>
-        <li v-if="rsvp.data.rsvp == 'interested'" v-for="rsvp in rsvps">
-            <h3>Interested</h3>
+        <li v-if="rsvp.data.rsvp == 'no'" v-for="rsvp in rsvps">
+            <h3>Not attending</h3>
             <ul>
               <li>
                 <a :href="rsvp.data.url">
@@ -55,24 +68,10 @@ layout: default
               </li>
             </ul>
           </li>
-          <li v-if="rsvp.data.rsvp == 'no'" v-for="rsvp in rsvps">
-              <h3>Not attending</h3>
-              <ul>
-                <li>
-                  <a :href="rsvp.data.url">
-                    <img :src="rsvp.data.author.photo">
-                    <div class="rsvps-name">
-                      <span v-text="rsvp.data.author.name"></span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-        {% endraw %}
-      </ul>
+      {% endraw %}
+    </ul>
 
-    </section>
-  {% endif %}
+  </section>
 
   <section>
       <hr>
@@ -81,7 +80,6 @@ layout: default
       <p>If you have any specific accessibility requirements, please <a href="mailto:hwc@calumryan.com">contact us</a> in advance and we'll make sure that we can accomomodate you.</p>
   </section>
 
-  {% if site.time < page.start %}
   <section>
       {% include rsvp.html %}
   </section>
