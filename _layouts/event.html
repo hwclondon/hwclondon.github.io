@@ -91,6 +91,7 @@ layout: default
   </section>
 
   {% else %}
+    {% assign content = post.content | strip_newlines %}
     {% if content != '' %}
     <section>
       <hr>
