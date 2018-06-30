@@ -1,6 +1,13 @@
 .rsvps {
-  padding: 0;
+  background: #efefef;
+  padding: 20px;
+  border-radius: 20px;
   margin: 0;
+
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
 
   > li {
     display: flex;
