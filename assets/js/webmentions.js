@@ -9,9 +9,8 @@ new Vue({
     },
 
     mounted() {
-      const pageUrl = 'http://localhost:4000/meetups/20180124';
-      //const pageUrl = document.querySelectorAll("link[rel~=canonical]")[0].href
-      const apiUrl = "https://webmention.io/api/mentions?jsonp&target="
+      const pageUrl = document.querySelectorAll("link[rel~=canonical]")[0].href;
+      const apiUrl = "https://webmention.io/api/mentions?jsonp&target=";
 
       axios.get(apiUrl + encodeURIComponent(pageUrl))
         .then(response => this.rsvps = response.data.links)
