@@ -29,10 +29,11 @@ layout: default
     <ul id="webmentions" class="rsvps">
       {% raw %}
 
-      <li>
-        <h2>Attending</h2>
+      <li id="attending" v-if="rsvpYes.length">
+        <h3>Attending</h3>
         <ul>
-          <li v-if="rsvp.data.rsvp == 'yes'" v-for="rsvp in rsvps">
+
+          <li v-for="rsvp in rsvpYes">
             <a :href="rsvp.data.url">
               <img :src="rsvp.data.author.photo">
               <div class="rsvps-name">
@@ -40,13 +41,14 @@ layout: default
               </div>
             </a>
           </li>
+
         </ul>
       </li>
 
-      <li>
+      <li id="interested" v-if="rsvpInterested.length">
           <h3>Interested</h3>
           <ul>
-            <li v-if="rsvp.data.rsvp == 'interested'" v-for="rsvp in rsvps">
+            <li v-for="rsvp in rsvpInterested">
               <a :href="rsvp.data.url">
                 <img :src="rsvp.data.author.photo">
                 <div class="rsvps-name">
@@ -56,10 +58,10 @@ layout: default
             </li>
           </ul>
         </li>
-        <li>
+        <li id="not-attending" v-if="rsvpNo.length">
             <h3>Not attending</h3>
             <ul>
-              <li v-if="rsvp.data.rsvp == 'no'" v-for="rsvp in rsvps">
+              <li v-for="rsvp in rsvpNo">
                 <a :href="rsvp.data.url">
                   <img :src="rsvp.data.author.photo">
                   <div class="rsvps-name">
