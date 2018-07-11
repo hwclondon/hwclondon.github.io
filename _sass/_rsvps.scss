@@ -72,5 +72,13 @@
     text-overflow: ellipsis;
   }
 
+  &-blank {
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    width: 90px;
+    height: 90px;
+    background-color: #CCC;
+  }
 
 }

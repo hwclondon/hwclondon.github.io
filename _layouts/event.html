@@ -27,51 +27,30 @@ layout: default
   <section class="flex-half">
     <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
     <ul id="webmentions" class="rsvps">
-      {% raw %}
-
       <li id="attending" v-if="rsvpYes.length">
         <h3>Attending</h3>
         <ul>
-
-          <li v-for="rsvp in rsvpYes">
-            <a :href="rsvp.data.url">
-              <img :src="rsvp.data.author.photo">
-              <div class="rsvps-name">
-                <span v-text="rsvp.data.author.name"></span>
-              </div>
-            </a>
-          </li>
-
+          {% raw %}<li v-for="rsvp in rsvpYes">{% endraw %}
+          {% include rsvp_attendee.html %}
+          {% raw %}</li>{% endraw %}
         </ul>
       </li>
-
       <li id="interested" v-if="rsvpInterested.length">
-          <h3>Interested</h3>
-          <ul>
-            <li v-for="rsvp in rsvpInterested">
-              <a :href="rsvp.data.url">
-                <img :src="rsvp.data.author.photo">
-                <div class="rsvps-name">
-                  <span v-text="rsvp.data.author.name"></span>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li id="not-attending" v-if="rsvpNo.length">
-            <h3>Not attending</h3>
-            <ul>
-              <li v-for="rsvp in rsvpNo">
-                <a :href="rsvp.data.url">
-                  <img :src="rsvp.data.author.photo">
-                  <div class="rsvps-name">
-                    <span v-text="rsvp.data.author.name"></span>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </li>
-      {% endraw %}
+        <h3>Interested</h3>
+        <ul>
+        {% raw %}<li v-for="rsvp in rsvpInterested">{% endraw %}
+        {% include rsvp_attendee.html %}
+        {% raw %}</li>{% endraw %}
+        </ul>
+      </li>
+      <li id="not-attending" v-if="rsvpNo.length">
+        <h3>Not attending</h3>
+        <ul>
+        {% raw %}<li v-for="rsvp in rsvpNo">{% endraw %}
+        {% include rsvp_attendee.html %}
+        {% raw %}</li>{% endraw %}
+        </ul>
+      </li>
     </ul>
 
   </section>
