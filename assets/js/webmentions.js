@@ -35,10 +35,10 @@ if ( document.getElementById("webmentions") ) {
         })
       },
 
-      rsvpInterested: function () {
+      rsvpMaybe: function () {
         return this.rsvps.filter(function (rsvp) {
           return this.rsvps.filter(function (rsvp) {
-            return rsvp.data.rsvp === 'interested'
+            return rsvp.data.rsvp === 'maybe'
           })
         })
       }

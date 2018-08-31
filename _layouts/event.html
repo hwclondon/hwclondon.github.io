@@ -35,10 +35,10 @@ layout: default
           {% raw %}</li>{% endraw %}
         </ul>
       </li>
-      <li id="interested" v-if="rsvpInterested.length">
-        <h3>Interested</h3>
+      <li id="interested" v-if="rsvpMaybe.length">
+        <h3>Maybe</h3>
         <ul>
-        {% raw %}<li v-for="rsvp in rsvpInterested">{% endraw %}
+        {% raw %}<li v-for="rsvp in rsvpMaybe">{% endraw %}
         {% include rsvp_attendee.html %}
         {% raw %}</li>{% endraw %}
         </ul>

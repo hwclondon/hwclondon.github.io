@@ -8,7 +8,7 @@
     {{ next_event.requirements }}
 
     <ul>
-      <li><p><strong>Indie RSVP</strong><br/>Able to send via <a href="https://indieweb.org/webmentions">Webmentions</a>? then RSVP your attendance to the <a href="{{ site.root_url }}/meetups/{{ next_event.start | date: '%Y%m%d' }}">next event</a>.</p><p>Webmention target for next event: <small class="dont-break-out">{{ site.root_url }}/meetups/{{ next_event.start | date: '%Y%m%d' }}</small></p><p><small><strong>Accepted webmention responses:</strong><br>yes/no/interested</small></p></li>
+      <li><p><strong>Indie RSVP</strong><br/>Able to send via <a href="https://indieweb.org/webmentions">Webmentions</a>? then RSVP your attendance to the <a href="{{ site.root_url }}/meetups/{{ next_event.start | date: '%Y%m%d' }}">next event</a>.</p><p>Webmention target for next event: <small class="dont-break-out">{{ site.root_url }}/meetups/{{ next_event.start | date: '%Y%m%d' }}</small></p><p><small><strong>Accepted webmention responses:</strong><br>yes/no/maybe</small></p></li>
       <li><p><strong>IndieWeb.org</strong><br>If you're able to use your own domain name to sign in to websites including IndieWeb.org then add yourself to the <a href="http://indieweb.org/next-hwc">next London event</a> listed there.</p></li>
       {% if next_event.tito %}
       <li>
