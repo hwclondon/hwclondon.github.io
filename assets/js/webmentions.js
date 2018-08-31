@@ -37,9 +37,9 @@ if ( document.getElementById("webmentions") ) {
 
       rsvpInterested: function () {
         return this.rsvps.filter(function (rsvp) {
-          if ( rsvp.data.rsvp === 'yes' && rsvp.data.rsvp === 'no' ) {
-            return rsvp.data.rsvp;
-          }
+          return this.rsvps.filter(function (rsvp) {
+            return rsvp.data.rsvp === 'interested'
+          })
         })
       }
     }
