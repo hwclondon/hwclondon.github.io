@@ -37,9 +37,7 @@ if ( document.getElementById("webmentions") ) {
 
       rsvpMaybe: function () {
         return this.rsvps.filter(function (rsvp) {
-          return this.rsvps.filter(function (rsvp) {
             return rsvp.data.rsvp === 'maybe'
-          })
         })
       }
     }
