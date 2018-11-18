@@ -1,7 +1,7 @@
 <a :href="rsvp.data.url">
 
     <template v-if="rsvp.data.author">
-    <img :src="rsvp.data.author.photo">
+    <img :src="rsvp.data.author.photo" :alt="Avatar of rsvp.data.author.name">
     <div class="rsvps-name">
         <span v-text="rsvp.data.author.name"></span>
     </div>
