@@ -13,7 +13,7 @@ description: Events listing for Homebrew Website Club London past and upcoming
   {% for next_event in sorted_events %}
     {% if next_event.end >= site.time %}
   <article>
-    <h3><a href="{{ next_event.start | date: '%Y%m%d' }}">{{ next_event.title }}</a></h3>
+    <h3><a href="{{ next_event.start | date: '%Y%m%d' }}">HWC London {{ next_event.start | date: '%e %B %Y' }}</a></h3>
   </article>
   {% break %}
 {% endif %}
@@ -31,7 +31,7 @@ description: Events listing for Homebrew Website Club London past and upcoming
   {% assign start_d = event.start | date: '%F' %}
   {% if start_d <= now_d %}
   <article>
-    <h3><a href="{{ event.start | date: '%Y%m%d' }}">{{ event.title }}</a></h3>
+    <h3><a href="{{ event.start | date: '%Y%m%d' }}">HWC London {{ event.start | date: '%e %B %Y' }}</a></h3>
   </article>
   {% endif %}
 {% endfor %}
