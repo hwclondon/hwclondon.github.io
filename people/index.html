@@ -28,7 +28,8 @@ attendees:
 <p>Our community continues to grow with new people of all backgrounds and abilities. If you’d like to get featured here with your personal website then come along to one of our future events.</p>
 
 <section class="groups">
-{% for attendee in page.attendees %}
+{% assign items = page.attendees | sort: 'name' %}
+{% for attendee in items %}
   <article>
     <h3>
     {% if site.data.attendees contains attendee %}
