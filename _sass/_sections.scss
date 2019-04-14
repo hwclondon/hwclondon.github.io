@@ -11,6 +11,13 @@
     margin-top: 0;
   }
 
+  img {
+    margin-bottom: 20px;
+    @include Medium {
+      margin-bottom: 0;
+    }
+  }
+
   &Summary {
     @include Medium {
       flex-direction: column;
@@ -20,13 +27,6 @@
         padding-right: 30px;
       }
 
-    }
-
-    img {
-      margin-bottom: 20px;
-      @include Medium {
-        margin-bottom: 0;
-      }
     }
   }
 
