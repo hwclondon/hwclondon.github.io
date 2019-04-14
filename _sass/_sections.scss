@@ -21,6 +21,13 @@
       }
 
     }
+
+    img {
+      margin-bottom: 20px;
+      @include Medium {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &Next {
