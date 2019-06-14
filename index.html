@@ -22,7 +22,7 @@ description: Homebrew Website Club London is a fortnightly meetup of people pass
     {% if site.upcoming == true %}
     <div class="EventAboutNext">
       <div class="inner">
-      {% assign sorted_events = site.events | sort: 'end' | reverse %}
+      {% assign sorted_events = site.events | sort: 'end' %}
       {% for next_event in sorted_events %}
         {% if next_event.end >= site.time %}
           <section class="box h-event">
