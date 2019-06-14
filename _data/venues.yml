@@ -18,3 +18,10 @@ thehub-bricklane:
   locality: London
   postal_code: E1&nbsp;6RL
   accessibility_info: "<p>For wheelchair users there is step-free access to the cafe located on the ground floor. WC facilities are located in the basement via the elevator.</p><p>For anyone with sensitivities to excessive noise or crowds: the venue generally isn't very busy or noisy with background music playing only on a low-medium volume.</p>"
+ole-and-steen-victoria:
+  name: hub by Premier Inn London Brick Lane
+  url: http://www.openstreetmap.org/?mlat=51.51929&mlon=-0.07130&zoom=12#map=16/51.51929/-0.07130
+  street_address: Nova Complex, 1 Sir Simon Milton Square
+  locality: London
+  postal_code: SW1E&nbsp;5DJ
+  accessibility_info: "<p>For wheelchair users there is step-free access to the cafe located on the ground floor. WC facilities are located on the first floor with elevator access.</p>"
