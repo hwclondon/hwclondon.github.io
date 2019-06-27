@@ -26,7 +26,7 @@ layout: default
 
   <section class="flex-half">
     <noscript>JavaScript must be enabled to retrieve and display RSVPs.</noscript>
-    <ul id="webmentions" class="rsvps">
+    <ul id="webmentions" class="rsvps" v-cloak>
       <li id="attending" v-if="rsvpYes.length">
         <h3>Attending</h3>
         <ul>
