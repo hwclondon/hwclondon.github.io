@@ -13,13 +13,8 @@ Finish that blog post you've been working on. Demos of personal websites and tec
 
 <img src="/photos/2019-08-07.jpg" alt="Ana Rodrigues, Calum Ryan, Bobby Sebolao, Neil Mather inside at ProvenDough cafe, London Covent Garden 2019-08-07">
 
-## Upcoming events
+## What is Homebrew Website Club?
 
-<ul class="listing">
-{%- for page in collections.events -%}
-  <li>
-    <a href="{{ page.url }}">{{ page.data.title }}</a> -
-    <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
-  </li>
-{%- endfor -%}
-</ul>
+Homebrew Website Club is a regular meetup of people passionate about or interested in creating, improving, building, designing their own website.
+
+The format is deliberately loose. After introductions we talk about what we're working on and see if we can help each other with projects. Whether you're just starting out with your own website or you want to discuss the latest IndieWeb technologies you're welcome to join us.

@@ -50,6 +50,7 @@ body {
   margin-right: auto;
   width: 90%;
   text-align: left;
+  padding-bottom: $vertical-spacing;
   @media (min-width: $mid) {
     width: 600px;
   };
@@ -204,5 +205,11 @@ footer {
   padding-bottom: 6em;
   border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: #ffffff;
+  border-top-color: $text-color;
+}
+
+.band-event {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: $text-color;
 }

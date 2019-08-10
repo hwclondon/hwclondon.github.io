@@ -6,10 +6,12 @@
     padding: .5rem 1rem;
     margin: auto;
     text-decoration: underline;
+    color: $page-color;
 }
 
 .button:visited,
 .button:link {
+    color: $page-color;
     border: none;
     text-decoration: underline;
 }

@@ -10,8 +10,11 @@
 
     {% include "header.njk" %}
 
-    <main class="container">
-      {{ content | safe }}
+    <main>
+      <article class="container">
+        {{ content | safe }}
+      </article>
+      {% include "event.njk" %}
     </main>
 
     {% include "footer.njk" %}

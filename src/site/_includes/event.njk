@@ -1,0 +1,14 @@
+<section class="band-event">
+    <div class="container">
+        <h2>Upcoming meetups</h2>
+
+        <ul class="listing">
+        {%- for page in collections.meetup -%}
+        <li>
+            <a href="{{ page.url }}">
+            <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time></a> - at {{ page.data.title }}
+        </li>
+        {%- endfor -%}
+        </ul>
+    </div>
+</section>
