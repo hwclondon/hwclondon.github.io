@@ -1,0 +1,19 @@
+/* breakpoints for media queries */
+$narrow: 400px;
+$mid: 740px;
+$wide: 1200px;
+
+/* colours */
+$page-color: #1e1e1e;
+$text-color: #ffffff;
+$accent-color: #27a4de;
+$dark-color: #000;
+$iw-orange   : #FF5C00;
+$iw-red      : #FF0000;
+$iw-yellow   : #FFB100;
+
+/* shadows */
+$shadow-1: 0 .2em .2em hsla(0, 0%, 0%, 0.5);
+
+/* spacing */
+$vertical-spacing: 2rem;

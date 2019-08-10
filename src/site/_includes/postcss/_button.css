@@ -1,0 +1,27 @@
+.button {
+    border: none;
+    border-radius: .2em;
+    background-color: $iw-orange;
+    transition: color .25s,background-color .25s;
+    padding: .5rem 1rem;
+    margin: auto;
+    text-decoration: underline;
+}
+
+.button:visited,
+.button:link {
+    border: none;
+    text-decoration: underline;
+}
+
+.button:hover,
+.button:focus {
+    color: $iw-orange;
+    background-color: $text-color;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: $vertical-spacing;
+}
