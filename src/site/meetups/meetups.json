@@ -1,0 +1,5 @@
+{
+  "layout" : "layouts/meetup.md",
+  "tags" : "meetup",
+  "templateEngineOverride": "njk,md"
+}

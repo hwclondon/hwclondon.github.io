@@ -23,12 +23,6 @@ The format is deliberately loose. After introductions we talk about what we're w
 
 <div class="h-event">
 {%- for page in collections.meetup -%}
-  <time class="dt-start" datetime="{{ next_event.start }}">
-    {{ next_event.start | date: '%A %e %B %Y at %l:%M%P' }}
-  </time>
-  &mdash;
-  <time class="dt-end" datetime="{{ next_event.end }}">
-    {{ next_event.end | date: '%l:%M%P' }}.
-  </time>
+
 {%- endfor -%}
 </div>
