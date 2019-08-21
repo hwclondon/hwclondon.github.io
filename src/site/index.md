@@ -18,3 +18,17 @@ Finish that blog post you've been working on. Demos of personal websites and tec
 Homebrew Website Club is a regular meetup of people passionate about or interested in creating, improving, building, designing their own website.
 
 The format is deliberately loose. After introductions we talk about what we're working on and see if we can help each other with projects. Whether you're just starting out with your own website or you want to discuss the latest IndieWeb technologies you're welcome to join us.
+
+## Upcoming meetups
+
+<div class="h-event">
+{%- for page in collections.meetup -%}
+  <time class="dt-start" datetime="{{ next_event.start }}">
+    {{ next_event.start | date: '%A %e %B %Y at %l:%M%P' }}
+  </time>
+  &mdash;
+  <time class="dt-end" datetime="{{ next_event.end }}">
+    {{ next_event.end | date: '%l:%M%P' }}.
+  </time>
+{%- endfor -%}
+</div>

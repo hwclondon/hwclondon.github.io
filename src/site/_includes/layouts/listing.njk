@@ -12,7 +12,15 @@
 
     <main id="intro">
       <article class="container">
-        {{ content | safe }}
+        <h1>Past meetups</h1>
+        <ul class="listing">
+        {%- for page in collections.meetup -%}
+        <li>
+            <a href="{{ page.url }}">
+            <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time></a> - at {{ page.data.title }}
+        </li>
+        {%- endfor -%}
+        </ul>
       </article>
     </main>
 

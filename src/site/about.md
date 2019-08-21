@@ -1,33 +1,15 @@
 ---
-title: Get Yours
+title: About Homebrew Website Club London
 layout: layouts/base.njk
-subtitle: Clone and deploy your own EleventyOne starter template.
+subtitle:
 ---
+The Homebrew Website Club we organise is inspired by a series of similar events organised by others within the IndieWeb community around the world. Not everyone who comes to our events has a website or even knows how to get started making one. We welcome anyone to attend and help teach each other the values of managing your online identity, privacy protection and safer communication with others on the web.
 
-## Hosting
+## Why the IndieWeb movement exists
+People in the IndieWeb community firmly believe in owning their identity through having their own domain and maintaining that what they publish remains theirs with the full means to control how it's distributed, displayed and removed.
 
-This site is deployed by, and hosted by [Netlify](https://www.netlify.com).
+The World we live in today is dominated by what we, the IndieWeb community, often refer to as silos such as Facebook where we pour in much of our personal information and, almost exclusively, the only place we publish our deepest thoughts, photos and other media.
 
-<div class="nakedLink">
+There's a strong momentum, certainly within the community, for people to be less reliant on such silos as Facebook to publish on the web. We like to re-engage more people to have their own website as well as, or instead of, profile pages exclusively on social media.
 
-Latest deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/056b4a67-70e6-4af4-9be5-dee151b8e906/deploy-status)](https://app.netlify.com/sites/eleventyone/deploys)
-
-</div>
-
-## One-click deploy
-
-To get your own instance of this [Eleventy](https://11ty.io) starter project cloned and deploying to [Netlify](https://www.netlify.com) very quickly, just click the button below and follow the instructions.
-
-<div class="nakedLink">
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/eleventyone)
-
-</div>
-
-## 👆 Wait, what happens when I click that button?
-
-Good question. Here's what it will do...
-
-1. Netlify will clone the [git repository]({{pkg.repository.url}}) of this project into your GitHub account. You will be asked for the required permissions to add the repo for you.
-2. They'll create a new site for you in Netlify, and configure it to use your shiny new repo. Right away you'll be able to deploy changes simply by pushing changes to your repo.
-3. That's it really.
+Within the IndieWeb community there are people generously giving up their time to help develop and support the technology that can make an ordinary personal website do all sorts of things you might think only social media platforms can offer.
