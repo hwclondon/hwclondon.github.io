@@ -1,3 +1,4 @@
+
 .button {
     border: none;
     border-radius: .2em;
@@ -6,12 +7,12 @@
     padding: .5rem 1rem;
     margin: auto;
     text-decoration: underline;
-    color: $page-color;
+    color: $button-text-color;
 }
 
 .button:visited,
 .button:link {
-    color: $page-color;
+    color: $button-text-color;
     border: none;
     text-decoration: underline;
 }
