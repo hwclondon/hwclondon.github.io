@@ -20,10 +20,10 @@
     "autoprefixer": "^9.6.1",
     "axios": "^0.19.0",
     "cssnano": "^4.1.10",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.1.0",
     "html-minifier": "^4.0.0",
-    "luxon": "^1.17.2",
-    "postcss": "^7.0.17",
+    "luxon": "^1.17.3",
+    "postcss": "^7.0.18",
     "postcss-color-mix": "^1.1.0",
     "postcss-comment": "^2.0.0",
     "postcss-import": "^12.0.1",
@@ -31,7 +31,7 @@
     "postcss-simple-vars": "^5.0.2",
     "precss": "^4.0.0",
     "uglify-js": "^3.6.0",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.22"
   },
   "devDependencies": {
     "cross-env": "5.2.0"
