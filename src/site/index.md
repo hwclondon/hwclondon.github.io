@@ -1,6 +1,6 @@
 ---
 title: Homebrew Website Club London
-subtitle: A project scaffold for getting building with Eleventy quickly.<br /> Made by <a href="https://twitter.com/philhawksworth">Phil</a> for <a href="https://twitter.com/philhawksworth">Phil</a>, but perhaps you might also find it useful.
+subtitle: Homebrew Website Club is a regular meetup of people passionate about or interested in creating, improving, building, designing their own website.
 layout: layouts/base.njk
 ---
 ## Join us at our fortnightly meetup
