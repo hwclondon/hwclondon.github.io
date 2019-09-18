@@ -106,16 +106,16 @@ ul, ol {
   padding-left: 1em;
 }
 
-a:link,
-a:visited {
+a:not(.no-decor):link,
+a:not(.no-decor):visited {
   color: $text-color;
   text-decoration: none;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: mix($text-color, $iw-orange, 20%)
 }
-a:hover,
-a:focus {
+a:not(.no-decor):hover,
+a:not(.no-decor):focus {
   color: $text-color;
   border-bottom-color: $text-color;
 }
