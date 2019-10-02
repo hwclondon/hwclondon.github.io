@@ -12,6 +12,7 @@ $iw-orange   : #FF5C00;
 $iw-red      : #FF0000;
 $iw-yellow   : #FFB100;
 $button-text-color : $text-color;
+$button-text-color-hover : $page-color;
 
 /* shadows */
 $shadow-1: 0 .2em .2em hsla(0, 0%, 0%, 0.5);

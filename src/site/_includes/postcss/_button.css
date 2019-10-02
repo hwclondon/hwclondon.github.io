@@ -17,6 +17,8 @@
     text-decoration: underline;
 }
 
+.button:visited:hover,
+.button:visited:focus,
 .button:hover,
 .button:focus {
     color: $iw-orange;

@@ -7,6 +7,22 @@ templateEngineOverride: njk, md
 <p class="date">
   Posted as an example, on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
 </p>
+
+
+{% if photo %}
+<figure class="photo">
+  <img src="/photos/{{ photo }}" alt="Photo with">
+  <figcaption>HWC London group photo</figcaption>
+</figure>
+{% endif %}
+
+{% if attendeeList.items %}
+  <h2>Attendees</h2>
+  {% for item in attendeeList.items %}
+  <p>Item</p>
+  {% endfor %}
+{% endif %}
+
 <main>
   {{ content | safe }}
   <div class="footnote">

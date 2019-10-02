@@ -1,7 +1,6 @@
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-
 module.exports = function(config) {
 
   // A useful way to reference the context we are runing eleventy in
@@ -32,7 +31,6 @@ module.exports = function(config) {
       return minified.code;
   });
 
-
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
   config.addPassthroughCopy("./src/site/photos");
@@ -50,5 +48,6 @@ module.exports = function(config) {
     markdownTemplateEngine : "njk",
     passthroughFileCopy: true
   };
+
 
 };

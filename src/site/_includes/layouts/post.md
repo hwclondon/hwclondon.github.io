@@ -8,7 +8,7 @@ templateEngineOverride: njk, md
   Posted as an example, on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
 </p>
 <main>
-  {{ content | safe }}
+  {{ content | safe }}]
   <div class="footnote">
     <p>
       This page is part of the posts section.
