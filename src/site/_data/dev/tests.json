@@ -1,0 +1,22 @@
+[
+    {
+       "name": "Towel Day",
+       "start": "2019-05-25",
+       "end": "2019-05-25",
+       "url": "http://www.towelday.org/",
+       "location": null
+     },
+     {
+       "name": "E3",
+       "start": "2019-06-11",
+       "end": "2019-06-14",
+       "url": "https://www.e3expo.com/",
+       "location": {
+         "name": "Los Angeles Convention Center",
+         "address": "1201 S Figueroa Street",
+         "locality": "Los Angeles",
+         "country": "California",
+         "postalCode": "90015"
+       }
+     }
+   ]

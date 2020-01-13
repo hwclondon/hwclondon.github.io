@@ -43,6 +43,7 @@ module.exports = function(config) {
       output: "dist",
       data: `_data/${env}`
     },
+    dataTemplateEngine: "njk",
     templateFormats : ["njk", "md", "11ty.js"],
     htmlTemplateEngine : "njk",
     markdownTemplateEngine : "njk",

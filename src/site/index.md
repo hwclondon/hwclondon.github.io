@@ -21,8 +21,8 @@ The format is deliberately loose. After introductions we talk about what we're w
 
 ## Upcoming meetups
 
-<div class="h-event">
+<ul class="h-event">
 {%- for page in collections.meetup -%}
-
+{% include "loop-event.njk" %}
 {%- endfor -%}
-</div>
+</ul>

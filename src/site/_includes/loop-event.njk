@@ -1,0 +1,4 @@
+{%- assign venue = venues[page.data.venue] -%}
+<li><a href="{{ page.url }}">
+<time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time></a> at <span class="p-location h-card"><a class="p-name u-url" href="{{ venue.url }}">{{ venue.name }}</a></span>
+</li>

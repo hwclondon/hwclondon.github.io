@@ -16,10 +16,10 @@ templateEngineOverride: njk, md
 </figure>
 {% endif %}
 
-{% if attendeeList.items %}
+{% if attendees %}
   <h2>Attendees</h2>
-  {% for item in attendeeList.items %}
-  <p>Item</p>
+  {% for item in attendees %}
+  <p>{{ item }}</p>
   {% endfor %}
 {% endif %}
 
