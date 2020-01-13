@@ -3,6 +3,7 @@
 @import '_syntax.css';
 @import '_button.css';
 @import '_intro.css';
+@import '_listing.css';
 @import '_navigation.css';
 @import '_londoneye.css';
 
@@ -74,10 +75,10 @@ h1 {
   line-height: 1;
 
   @media (min-width: $mid) {
-    font-size: 5em;
+    font-size: 4em;
   };
   @media (min-width: $wide) {
-    font-size: 6em;
+    font-size: 5em;
   };
 }
 
