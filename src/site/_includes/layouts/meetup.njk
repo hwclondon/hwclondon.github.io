@@ -5,6 +5,7 @@ templateEngineOverride: njk, md
 ---
 
 <main>
+<h1 class="h2">{{ date | dateDisplay("LLLL d, y") }}</h1>
 {{ content | safe }}
 
 {% if photo %}

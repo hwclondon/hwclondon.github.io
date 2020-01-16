@@ -28,6 +28,8 @@ attendees:
   - https://barryfrost.com/
 ---
 
+# People
+
 Our community continues to grow with new people of all backgrounds and abilities. If you’d like to get featured here with your personal website then come along to one of our future events.
 
 <ul>

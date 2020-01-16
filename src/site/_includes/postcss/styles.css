@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap');
-@import '_variables.css';
-@import '_syntax.css';
-@import '_button.css';
-@import '_intro.css';
-@import '_listing.css';
-@import '_navigation.css';
-@import '_londoneye.css';
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap");
+@import "_variables.css";
+@import "_syntax.css";
+@import "_button.css";
+@import "_intro.css";
+@import "_listing.css";
+@import "_navigation.css";
+@import "_londoneye.css";
 
 * {
   margin: 0;
@@ -22,7 +22,8 @@
   color: $page-color;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -35,7 +36,7 @@ body {
   text-align: center;
   background-color: $page-color;
   color: mix($text-color, $page-color, 90%);
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 300;
   font-size: 18px;
   line-height: 1.8;
@@ -43,7 +44,7 @@ body {
 
   @media (min-width: $narrow) {
     font-size: 22px;
-  };
+  }
 }
 
 .container {
@@ -54,14 +55,15 @@ body {
   padding-bottom: $vertical-spacing;
   @media (min-width: $mid) {
     width: 600px;
-  };
+  }
   @media (min-width: $wide) {
     width: 800px;
-  };
+  }
 }
 
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: $text-color;
   font-weight: 600;
   margin-top: $vertical-spacing;
@@ -70,20 +72,27 @@ h1, h2, h3 {
 }
 h1 {
   font-size: 3em;
-  margin-top:0.4em;
-  margin-bottom:0.2em;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
   line-height: 1;
 
   @media (min-width: $mid) {
     font-size: 4em;
-  };
+  }
   @media (min-width: $wide) {
     font-size: 5em;
-  };
+  }
+}
+
+.h2 {
+  font-size: 30px;
 }
 
 .container {
-  p, img, ul, ol {
+  p,
+  img,
+  ul,
+  ol {
     margin-top: $vertical-spacing;
     margin-bottom: 0;
   }
@@ -103,7 +112,8 @@ img {
   max-width: 100%;
 }
 
-ul, ol {
+ul,
+ol {
   padding-left: 1em;
 }
 
@@ -113,7 +123,7 @@ a:not(.no-decor):visited {
   text-decoration: none;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: mix($text-color, $iw-orange, 20%)
+  border-bottom-color: mix($text-color, $iw-orange, 20%);
 }
 a:not(.no-decor):hover,
 a:not(.no-decor):focus {
@@ -125,7 +135,7 @@ a:not(.no-decor):focus {
 .nakedLink a:visited,
 .nakedLink a:hover,
 .nakedLink a:focus {
-  border-bottom-style:none;
+  border-bottom-style: none;
 }
 
 .nav {
@@ -153,22 +163,21 @@ a:not(.no-decor):focus {
   }
   a:hover,
   a:focus {
-      color: $text-color;
-      border-top-color: $text-color;
-      border-bottom-style: none;
+    color: $text-color;
+    border-top-color: $text-color;
+    border-bottom-style: none;
   }
 
   small {
     display: block;
     font-size: 0.7em;
-    color: mix($text-color,$accent-color, 60%);
+    color: mix($text-color, $accent-color, 60%);
   }
 }
 
-
 code {
   font-size: 0.8em;
-  background-color: mix($text-color,$accent-color, 80%);
+  background-color: mix($text-color, $accent-color, 80%);
   color: rgb(42, 65, 77);
   padding-top: 4px;
   padding-bottom: 4px;
@@ -198,7 +207,6 @@ pre {
     padding-right: 0;
   }
 }
-
 
 footer {
   margin-top: 6em;
