@@ -8,7 +8,7 @@ layout: layouts/base.njk
 Finish that blog post you've been working on. Demos of personal websites and technology. Discussion around the independent web. Join a community with like-minded interests. Bring friends that want a personal site!
 
 <div class="button-container">
-  <a href="https://events.indieweb.org/" class="button">RSVP to our next event on IndieWeb.org</a>
+  <a href="https://events.indieweb.org/tag/hwclondon" class="button">RSVP to our next event on IndieWeb.org</a>
 </div>
 
 <img src="/photos/2019-08-07.jpg" alt="Ana Rodrigues, Calum Ryan, Bobby Sebolao, Neil Mather inside at ProvenDough cafe, London Covent Garden 2019-08-07">
@@ -21,7 +21,7 @@ The format is deliberately loose. After introductions we talk about what we're w
 
 ## Upcoming meetups
 
-All our upcoming meetups are now listed on [events.indieweb.org](events.indieweb.org).
+All our upcoming meetups are now listed on [events.indieweb.org](https://events.indieweb.org/tag/hwclondon).
 
 <br>
 <hr>
