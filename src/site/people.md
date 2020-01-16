@@ -33,7 +33,7 @@ attendees:
 Our community continues to grow with new people of all backgrounds and abilities. If you’d like to get featured here with your personal website then come along to one of our future events.
 
 <ul>
-{% for attendee in attendees %}
-<li><a class="u-url p-name" href="{{ attendee }}"><small>{{ attendee }}</small></a></li>
+{% for attendee in data_attendees %}
+<li>{% if data_attendees.indexOf(attendee.url) %}<a href="{{ attendee.url }}">{{ attendee.name }}</a>{% else %}{{ attendee.name }}{% endif %}</li>
 {% endfor %}
 </ul>

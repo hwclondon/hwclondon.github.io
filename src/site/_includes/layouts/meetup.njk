@@ -19,7 +19,7 @@ templateEngineOverride: njk, md
   <h2>Attendees</h2>
   <ul>
   {% for attendee in attendees %}
-  <li><a class="u-url p-name" href="{{ attendee }}"><small>{{ attendee }}</small></a></li>
+  {% if data_attendees.indexOf(attendee.url) %}<li><a class="u-url p-name" href="{{ attendee }}"><small>{{ attendee }}</small></a></li>{% endif %}
   {% endfor %}
   </ul>
 {% endif %}
