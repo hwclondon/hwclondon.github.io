@@ -4,10 +4,8 @@ pageClass: meetups
 templateEngineOverride: njk, md
 ---
 
-<p class="date">
-  Posted as an example, on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
-</p>
-
+<main>
+{{ content | safe }}
 
 {% if photo %}
 <figure class="photo">
@@ -18,16 +16,16 @@ templateEngineOverride: njk, md
 
 {% if attendees %}
   <h2>Attendees</h2>
-  {% for item in attendees %}
-  <p>{{ item }}</p>
+  <ul>
+  {% for attendee in attendees %}
+  <li><a class="u-url p-name" href="{{ attendee }}"><small>{{ attendee }}</small></a></li>
   {% endfor %}
+  </ul>
 {% endif %}
 
-<main>
-  {{ content | safe }}
-  <div class="footnote">
-    <p>
-      This page is part of the posts section.
-    </p>
-  </div>
+<div class="footnote">
+  <p>
+    This page is part of the posts section.
+  </p>
+</div>
 </main>
