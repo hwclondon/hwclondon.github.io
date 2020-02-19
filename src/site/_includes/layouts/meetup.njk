@@ -8,12 +8,10 @@ templateEngineOverride: njk, md
 <h1 class="h2">{{ date | dateDisplay("LLLL d, y") }}</h1>
 {{ content | safe }}
 
-{% if photo %}
 <figure class="photo">
   <img src="/photos/{{ date | dateDisplay("LLLL d, y") }}.jpg" alt="Photo with">
   <figcaption>HWC London group photo</figcaption>
 </figure>
-{% endif %}
 
 {% if attendees %}
   <h2>Attendees</h2>
