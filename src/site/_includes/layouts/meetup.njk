@@ -10,7 +10,7 @@ templateEngineOverride: njk, md
 
 {% if photo %}
 <figure class="photo">
-  <img src="/photos/{{ photo }}" alt="Photo with">
+  <img src="/photos/{{ date | dateDisplay("LLLL d, y") }}.jpg" alt="Photo with">
   <figcaption>HWC London group photo</figcaption>
 </figure>
 {% endif %}
