@@ -32,6 +32,14 @@
   animation-iteration-count: infinite;
 }
 
+
+@media (prefers-reduced-motion: reduce) {
+  .wheel, 
+  .grouped {
+    animation: none;
+  }
+}
+
 .londoneye {
   height: 90%;
   margin: auto;
