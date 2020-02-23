@@ -9,8 +9,7 @@ templateEngineOverride: njk, md
 {{ content | safe }}
 
 <figure class="photo">
-  <img src="/photos/{{ date | dateDisplay("y-LL-dd") }}.jpg" alt="Photo with">
-  <figcaption>HWC London group photo</figcaption>
+  <img src="/photos/{{ date | dateDisplay("y-LL-dd") }}.jpg" alt="Attendees at HWC London">
 </figure>
 
 {% if attendees %}
