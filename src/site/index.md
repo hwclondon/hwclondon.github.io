@@ -22,12 +22,3 @@ The format is deliberately loose. After introductions we talk about what we're w
 ## Upcoming meetups
 
 All our upcoming meetups are now listed on [events.indieweb.org](https://events.indieweb.org/tag/hwclondon).
-
-<br>
-<hr>
-
-## IndieWebCamp London 2020 is confirmed!
-
-IndieWebCamp London 2020 is a gathering for independent web creators of all kinds, from graphic artists, to designers, UX engineers, coders, hackers, to share ideas, actively work on creating for their own personal websites, and build upon each others creations.
-
-[Learn more](https://indieweb.org/2020/London) and [register](https://www.eventbrite.com/e/indiewebcamp-london-2020-tickets-85763160923) today to make sure you don't miss out on the first ever IndieWebCamp in London.
