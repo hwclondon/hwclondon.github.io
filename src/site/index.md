@@ -1,9 +1,12 @@
 ---
-title: Homebrew Website Club London
+title: Homebrew Website Club London Online
 subtitle: Homebrew Website Club is a regular meetup of people passionate about or interested in creating, improving, building, designing their own website.
 layout: layouts/base.njk
 ---
-## Join us at our fortnightly meetup
+
+## Join us at our weekly online meetup
+
+_Whilst we're unable to meetup in-person due to the ongoing Covid-19 pandemic, we're running our meetup online weekly over Zoom. Not only that but we're open to anyone who'd like to join us anywhere in Europe and beyond from 18:00 to 20:00 (British Summer Time)._
 
 Finish that blog post you've been working on. Demos of personal websites and technology. Discussion around the independent web. Join a community with like-minded interests. Bring friends that want a personal site!
 
