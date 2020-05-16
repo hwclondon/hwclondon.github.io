@@ -6,6 +6,9 @@
   clear: both;
   overflow: hidden;
   padding-top: 53px;
+  border-bottom-left-radius: 50% 60%;
+  border-bottom-right-radius: 50% 60%;
+
   @media (min-width: $mid) {
     padding-top: 0;
   }
