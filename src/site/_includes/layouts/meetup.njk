@@ -8,9 +8,11 @@ templateEngineOverride: njk, md
 <h1 class="h2">{{ date | dateDisplay("LLLL d, y") }}</h1>
 {{ content | safe }}
 
+{% if photo != 'empty' %}
 <figure class="photo">
   <img src="/photos/{{ date | dateDisplay("y-LL-dd") }}.jpg" alt="Attendees at HWC London">
 </figure>
+{% endif %}
 
 {% if attendees %}
   <h2>Attendees</h2>
