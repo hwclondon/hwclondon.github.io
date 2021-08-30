@@ -15,7 +15,7 @@
     "url": "https://github.com/hwclondon/hwclondon.github.io"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
@@ -27,7 +27,7 @@
     "postcss-color-mix": "^1.1.0",
     "postcss-comment": "^2.0.0",
     "postcss-import": "^12.0.1",
-    "postcss-mixins": "^6.2.3",
+    "postcss-mixins": "^8.1.0",
     "postcss-simple-vars": "^5.0.2",
     "precss": "^4.0.0",
     "uglify-js": "^3.12.0",
