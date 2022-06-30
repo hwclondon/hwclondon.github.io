@@ -26,6 +26,8 @@ attendees:
   - https://martinheathsjournal.blog/
   - https://mey.vn/
   - https://barryfrost.com/
+  - https://marksuth.dev/
+  - https://jamesg.blog/
 ---
 
 # People

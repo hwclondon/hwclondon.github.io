@@ -6,7 +6,7 @@ layout: layouts/base.njk
 
 ## Join us at our weekly online meetup
 
-_Whilst we're unable to meetup in-person due to the ongoing Covid-19 pandemic, we're running our meetup online bi-weekly over Zoom. We're open to anyone who'd like to join us anywhere in Europe and beyond from 18:00 to 20:00 (British Summer Time)._
+_The HWC London / Europe meetup is now hosted online. We're open to anyone who'd like to join us anywhere in Europe and beyond from 18:00 to 20:00 (British Summer Time)._
 
 Finish that blog post you've been working on. Demos of personal websites and technology. Discussion around the independent web. Join a community with like-minded interests. Bring friends that want a personal site!
 
