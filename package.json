@@ -15,7 +15,7 @@
     "url": "https://github.com/hwclondon/hwclondon.github.io"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.2",
