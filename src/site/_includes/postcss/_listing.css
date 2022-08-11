@@ -20,3 +20,10 @@
   width: 100%;
   height: 100%;
 }
+
+.event-notification {
+  padding: 0.5em;
+  background: #2d2d2d;
+  box-shadow: $shadow-1;
+  border: 2px solid $iw-yellow;
+}

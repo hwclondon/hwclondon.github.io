@@ -12,7 +12,12 @@
 
     <main id="intro">
       <article class="container">
-        <h1>Past meetups</h1>
+        <h1>Meetups</h1>
+
+        <div class="event-notification">
+          <p>Our upcoming events are now listed on the <a href="https://events.indieweb.org">IndieWeb community events</a> page.</p>
+          <p>Check regularly to find the latest HWC London / Europe meetups and other events.</p>
+        </div>
         <ul class="listing">
         {%- for page in collections.meetup | reverse -%}
         <li>
