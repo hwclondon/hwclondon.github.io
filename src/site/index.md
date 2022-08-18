@@ -4,7 +4,7 @@ subtitle: Homebrew Website Club is a regular meetup of people passionate about o
 layout: layouts/base.njk
 ---
 
-## Join us at our weekly online meetup
+## Join us at our fortnightly online meetup
 
 _The HWC London / Europe meetup is now hosted online. We're open to anyone who'd like to join us anywhere in Europe and beyond from 18:00 to 20:00 (British Summer Time)._
 
