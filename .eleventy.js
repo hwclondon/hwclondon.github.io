@@ -40,7 +40,7 @@ module.exports = function(config) {
   return {
     dir: {
       input: "src/site",
-      output: "dist",
+      output: "docs",
       data: `_data/${env}`
     },
     dataTemplateEngine: "njk",
