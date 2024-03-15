@@ -1,0 +1,236 @@
+[
+  {
+    "url": "/meetups/20160615/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20170712/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20170809/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20170823/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20170906/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20171004/",
+    "title": "HWC London",
+    "index": " tonight’s HWC London joined virtual HWC Points discussed included:Barry’s recent work with Jekyll supporting IndieWeb technologiesTantek’s updates his website including payment page tantekcom/payRelated this challenges making easy facilities your own websiteDifferences bank transfer methods both inside between different countriesTrying out sending SMS via contact pages Tantek&#39;s example tantekcom/contact"
+  },
+  {
+    "url": "/meetups/20171018/",
+    "title": "HWC London",
+    "index": " this week&#39;s HWC London had one our biggest turnouts ever including cofounder IndieWeb movement Tantek Çelik"
+  },
+  {
+    "url": "/meetups/20171213/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20180110/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20180124/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20180207/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/posts/a-post/",
+    "title": "A post page",
+    "index": "There&#39;s much here sample post page Better get work common frontmatter data files posts section are abstracted into postsjson file that don&#39;t need repeat every file Handy looks like this:{ &quot;layout&quot; : &quot;layouts/postmd&quot; &quot;tags&quot; &quot;post&quot; &quot;templateEngineOverride&quot;: &quot;njkmd&quot;}"
+  },
+  {
+    "url": "/posts/another-post/",
+    "title": "Another post page",
+    "index": "Another simple pageSince post pages are tagged they form collection can easily inspected iterated over See that home page"
+  },
+  {
+    "url": "/meetups/20180404/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20180502/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20180627/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20180725/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20180822/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20180919/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20181031/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20181128/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20181212/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190109/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190123/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190227/",
+    "title": "Indigenous &amp; Micropub",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190320/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190417/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190501/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190515/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190529/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190612/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190626/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190710/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190724/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190807/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190821/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20190918/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20191002/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20191211/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20200122/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/meetups/20200219/",
+    "title": "HWC London",
+    "index": ""
+  },
+  {
+    "url": "/about/",
+    "title": "About Homebrew Website Club London",
+    "index": "About Homebrew Website Club organise inspired by series similar events organised others within IndieWeb community around world everyone who comes our website even knows how get started making one welcome anyone attend help teach each other values managing your online identity privacy protection safer communication with webWhy movement existsPeople firmly believe owning their identity through having own domain maintaining that what they publish remains theirs full means control &#39;s distributed displayed removed World live today dominated community often refer silos such Facebook where pour much personal information almost exclusively only place deepest thoughts photos mediaThere&#39;s strong momentum certainly people less reliant web like reengage more have well instead profile pages exclusively social mediaWithin there are generously giving time develop support technology can make ordinary sorts things might think media platforms offer"
+  },
+  {
+    "url": "/code-of-conduct/",
+    "title": "Code of conduct",
+    "index": " attendees Homebrew Website Club London are required agree with our code conduct which follows IndieWeborg respectful other people respectfully ask people stop bothered can&#39;t resolve issue contact staff being problem will apparent &#39;ll asked leave harassed notice that someone else have any concerns please inform one event hosts present (Mark James) immediately"
+  },
+  {
+    "url": "/",
+    "title": "Homebrew Website Club London Online",
+    "index": "Join us our fortnightly online meetup HWC London / Europe meetup now hosted online &#39;re open anyone who&#39;d like join anywhere beyond from 18:00 20:00 (British Summer Time)Finish that blog post &#39;ve been working Demos personal websites technology Discussion around independent web community with likeminded interests Bring friends want site! RSVP next event IndieWeborgWhat Homebrew Website ClubHomebrew Club regular people passionate about interested creating improving building designing their own website format deliberately loose After introductions talk what &#39;re see can help each other projects Whether &#39;re just starting out your website discuss latest IndieWeb technologies welcome usUpcoming meetups upcoming meetups are listed eventsindieweborg"
+  },
+  {
+    "url": "/meetups/",
+    "title": "Meetups",
+    "index": ""
+  },
+  {
+    "url": "/people/",
+    "title": "Who are we?",
+    "index": "PeopleOur community continues grow with new people backgrounds abilities ’d like get featured here your personal website then come along one our future eventsJosu� Vzquez RendoLillian KarabaicBobby SebolaoJohn ConwayDom PatmoreAlex ChowKristof De JaegerAndrew MarksJonas VossAna RodriguesChris BurnellDave LetoreyBarry FrostCalum RyanNeil MatherAndrea RotaKevin MarksManuel PueyoMartin HeathIrina BolychevskyTantek Ccedil;elikJean RussellTom MorrisJamesMark"
+  },
+  {
+    "url": "/splash/",
+    "title": "HWC Europe/London",
+    "index": ""
+  }]
